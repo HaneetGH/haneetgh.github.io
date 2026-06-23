@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Haneet Singh Chhabra — Senior Software Engineer and technical leader driving platform architecture, performance at scale, and cross-team engineering excellence at Walmart Global Tech."/>
-    <title>Haneet Singh Chhabra | Senior Software Engineer & Technical Lead</title>
+    <meta name="description" content="Haneet Singh Chhabra — Senior Android Engineer and technical lead owning mobile projects end-to-end, with backend and API integration experience at Walmart Global Tech."/>
+    <title>Haneet Singh Chhabra | Senior Android Engineer</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -113,6 +113,51 @@
           color: var(--muted);
           margin-top: 6px;
           line-height: 1.4;
+        }
+
+        .e2e-flow {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          gap: 10px;
+          margin-bottom: 20px;
+        }
+
+        .e2e-step {
+          background: var(--accent-dim);
+          border: 1px solid rgba(56, 189, 248, 0.15);
+          border-radius: 10px;
+          padding: 12px 10px;
+          text-align: center;
+          font-size: 13px;
+          font-weight: 600;
+          color: var(--accent);
+        }
+
+        .collab-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          gap: 14px;
+          margin: 16px 0 8px;
+        }
+
+        .collab-item {
+          background: #020617;
+          border: 1px solid var(--border);
+          border-radius: 10px;
+          padding: 16px;
+        }
+
+        .collab-item strong {
+          display: block;
+          font-size: 14px;
+          color: var(--text);
+          margin-bottom: 6px;
+        }
+
+        .collab-item span {
+          font-size: 13px;
+          color: var(--muted);
+          line-height: 1.5;
         }
 
         section { margin-bottom: 56px; }
@@ -245,22 +290,25 @@
 
     <header>
         <nav class="nav">
-            <a href="#leadership">Leadership</a>
-            <a href="#experience-walmart">Walmart</a>
+            <a href="#collaboration">Product & Stakeholders</a>
+            <a href="#experience-walmart">Android & Walmart</a>
+            <a href="#e2e">E2E Leadership</a>
             <a href="#experience-prior">Earlier Roles</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
         </nav>
         <h1>Haneet Singh Chhabra</h1>
-        <p class="tagline">Senior Software Engineer · Technical Lead</p>
+        <p class="tagline">Senior Software Engineer (Android) · E2E Technical Lead</p>
         <p class="lead">
-            I build platforms and lead engineering initiatives that outlast the sprint —
-            architecture others adopt, tools teams rely on, and systems that perform at Walmart scale.
-            10+ years across startups and Big Tech. Multiple-time Bravo Award recipient.
+            Android is my core — 10+ years building high-traffic mobile apps across startups and Big Tech.
+            What sets me apart is owning the full lifecycle: discovery with PM, stakeholder alignment,
+            technical design, hands-on Android development, and backend/API work when the feature demands it.
+            Multiple-time Bravo Award recipient.
         </p>
         <div class="meta">
             <span>Bengaluru, India</span>
-            <span>10+ Years</span>
+            <span>10+ Years · Android Specialist</span>
+            <span>Kotlin · Java · Jetpack · Performance · GraphQL</span>
             <span>
                 <a href="https://www.linkedin.com/in/haneetchhabra" target="_blank" rel="noopener">LinkedIn</a>
             </span>
@@ -270,73 +318,130 @@
     <div class="impact-row">
         <div class="impact-item">
             <span class="num">74%</span>
-            <span class="desc">Faster reviews render on highest-traffic product pages</span>
+            <span class="desc">Faster Android reviews UI on highest-traffic product pages</span>
         </div>
         <div class="impact-item">
             <span class="num">1.6B+</span>
             <span class="desc">Backend API calls eliminated per day</span>
         </div>
         <div class="impact-item">
-            <span class="num">~85%</span>
-            <span class="desc">Projected peak load reduction via platform caching design</span>
+            <span class="num">8+</span>
+            <span class="desc">Senior stakeholders briefed on architecture decisions</span>
         </div>
         <div class="impact-item">
             <span class="num">5 teams</span>
-            <span class="desc">Engaged in architecture evaluation presented to senior leadership</span>
+            <span class="desc">Coordinated across for system design and delivery</span>
         </div>
     </div>
 
-    <section id="leadership">
-        <h3>Technical Leadership</h3>
+    <section id="collaboration">
+        <h3>Product & Stakeholder Alignment</h3>
         <div class="card">
+            <p>I work closely with product and leadership throughout the feature lifecycle — not only during implementation. This is a core part of how I deliver as a senior Android engineer.</p>
+
+            <div class="collab-grid">
+                <div class="collab-item">
+                    <strong>Product & PM</strong>
+                    <span>Epic discovery, requirements refinement, feasibility analysis, sprint scoping, and A/B experiment design with clear success metrics.</span>
+                </div>
+                <div class="collab-item">
+                    <strong>Senior Leadership</strong>
+                    <span>Briefed 8+ senior stakeholders on architecture tradeoffs, caching strategy, and reviews platform decisions with full written analysis.</span>
+                </div>
+                <div class="collab-item">
+                    <strong>Cross-Platform Teams</strong>
+                    <span>Aligned Android, iOS, and web on multi-image selection, camera flows, and reviewer community for consistent customer experience.</span>
+                </div>
+                <div class="collab-item">
+                    <strong>Backend & Partner Teams</strong>
+                    <span>Coordinated with backend, search, data science, and third-party vendor (Bazaarvoice) teams on API contracts, integrations, and rollout.</span>
+                </div>
+            </div>
+
+            <h4>Examples</h4>
             <ul>
-                <li><strong>Sets direction, not just code.</strong> Led API layer development for Walmart's next-generation reviews platform — established integration patterns the entire team now follows for new backend services.</li>
-                <li><strong>Influences beyond the team.</strong> Evaluated seven architectural approaches across five teams for product data at scale; presented tradeoff analysis to senior leadership and drove the adopted recommendation.</li>
-                <li><strong>Builds capability in others.</strong> Mentor to junior engineers on performance engineering, system design, and test automation; delegated design review ownership across multiple workstreams to reduce bus-factor risk.</li>
-                <li><strong>Creates lasting infrastructure.</strong> Built PixelMind (visual regression testing) and a team-wide release sign-off process — both moved from personal initiatives to shared engineering standards.</li>
-                <li><strong>Owns outcomes under pressure.</strong> Led incident response when CI stability dropped to ~48%, coordinating cross-team resolution without missing delivery commitments.</li>
+                <li><strong>Video reviews</strong> — self-initiated from discovery: partnered with PM on user stories, aligned vendor (BV) on API behavior, and scoped a 3-sprint Android delivery plan.</li>
+                <li><strong>Architecture decision</strong> — engaged five teams, documented seven options, and presented recommendation to senior leadership for product data on review pages.</li>
+                <li><strong>Creator vs Reviewer Program</strong> — identified a product constraint no team owned; designed APIs and aligned both program teams on enforcement.</li>
+                <li><strong>Used & refurbished products</strong> — Android technical lead coordinating requirements and timelines across backend, web, and product.</li>
+                <li><strong>AI image search</strong> — partnered with data science and search teams from prototype scoping through Android delivery.</li>
             </ul>
-            <span class="award">Multiple-time Walmart Bravo Award · Zero accessibility defects on shipped features</span>
         </div>
     </section>
 
     <section id="experience-walmart">
-        <h3>Experience — Walmart Global Tech</h3>
+        <h3>Android Engineering — Walmart Global Tech</h3>
 
         <div class="card">
             <div class="role-header">
                 <h4>Senior Software Engineer — Android</h4>
                 <span>Feb 2023 – Present</span>
             </div>
-            <p class="role-context">Walmart Shopping App · Reviews & User-Generated Content · Commerce Platform</p>
+            <p class="role-context">Walmart Shopping App · Reviews & User-Generated Content</p>
 
-            <h4>Platform & Architecture</h4>
+            <h4>Android Performance & Architecture</h4>
             <ul>
-                <li>Technical owner for API orchestration on the reviews platform rebuild — GraphQL services, seller reviews, product sampling, and catalog enrichment with feature-flagged rollout.</li>
-                <li>Designed platform-wide Redis caching with event-driven invalidation; projected to cut peak backend load by ~85% with no infrastructure changes.</li>
-                <li>Architected parallel dashboard data loading with timeout controls, partial-failure handling, and graceful degradation across concurrent service calls.</li>
-                <li>Proactively surfaced a cross-team API migration blocker before downstream teams were impacted — preventing retroactive fixes across the platform.</li>
+                <li>Owned reviews UI performance on the item detail page — render time <strong>380ms → 96ms</strong>, CPU <strong>−72%</strong>, dropped frames <strong>−73%</strong>, jank eliminated on one of Walmart's most-visited Android screens.</li>
+                <li>Led variant reviews caching on Android — reduced <strong>1–1.6 billion API calls per day</strong> and improved latency ~21% without business impact.</li>
+                <li>Migrated reviews from a legacy embedded module to a standalone Android module — zero production regressions, full backward compatibility.</li>
+                <li>Architected parallel dashboard data loading on Android with timeout controls, partial-failure handling, and graceful degradation.</li>
             </ul>
 
-            <h4>Performance & Reliability at Scale</h4>
+            <h4>Android Features — Owned E2E</h4>
             <ul>
-                <li>Drove reviews UI optimization on the item detail page — render time <strong>380ms → 96ms</strong>, CPU <strong>−72%</strong>, dropped frames <strong>−73%</strong>, jank eliminated on one of Walmart's most-visited screens.</li>
-                <li>Led variant reviews caching — reduced <strong>1–1.6 billion API calls per day</strong> and improved latency ~21% without business impact.</li>
-                <li>Migrated reviews from a legacy embedded module to a standalone platform — zero production regressions, full backward compatibility.</li>
+                <li>Camera upload, multi-image selection, reviewer community, and direct camera entry — owned from PM discovery and technical design through Android implementation and iOS/web alignment.</li>
+                <li>Self-initiated video reviews on Android — vendor API research, metadata extraction design, PoC, user stories, and sprint plan.</li>
+                <li>AI image search prototype on Android with data science and search teams — scoped, built, and delivered under 2 seconds end-to-end.</li>
+                <li>Android technical lead for used/refurbished product experiences — coordinated delivery across backend, web, and product teams.</li>
             </ul>
 
-            <h4>Cross-Team Delivery & Innovation</h4>
+            <h4>Backend & API (When Features Require It)</h4>
             <ul>
-                <li>Shipped camera upload, multi-image selection, and reviewer community features on Android; aligned iOS and web counterparts for consistent customer experience.</li>
-                <li>Self-initiated video reviews program — authored vendor API reference, designed cross-platform approach, and delivered Android PoC with sprint plan and test coverage.</li>
-                <li>Partnered with data science and search teams on an AI-powered image search prototype — end-to-end latency under 2 seconds on Android.</li>
-                <li>Android technical lead for used and refurbished product initiatives spanning backend, web, and product teams.</li>
+                <li>Contributed to GraphQL API orchestration for reviews platform rebuild — resolvers, seller reviews, product sampling, and catalog enrichment.</li>
+                <li>Built OpenAPI service clients and integration patterns adopted team-wide; designed Redis caching projected to cut peak backend load <strong>~85%</strong>.</li>
             </ul>
 
-            <h4>Engineering Excellence</h4>
+            <h4>Quality, Tooling & Leadership</h4>
             <ul>
-                <li>Restored and sustained CI stability — <strong>48+ consecutive</strong> stable automation runs; cut false failures <strong>~30–35%</strong>.</li>
-                <li>Designed A/B experiments with clear success metrics and guardrails for production feature rollouts.</li>
+                <li>Built PixelMind (Android visual regression testing) and release sign-off SOP — both adopted as team standards.</li>
+                <li>Sustained <strong>48+ consecutive</strong> stable CI runs; led incident response when automation dropped to ~48%.</li>
+                <li>Designed A/B experiments with clear success metrics; mentor 2–3 Android engineers on performance and architecture.</li>
+            </ul>
+            <span class="award">Multiple-time Walmart Bravo Award · Zero accessibility defects</span>
+        </div>
+    </section>
+
+    <section id="e2e">
+        <h3>Beyond Code — E2E Leadership</h3>
+        <div class="card">
+            <div class="e2e-flow">
+                <div class="e2e-step">Discover</div>
+                <div class="e2e-step">Align</div>
+                <div class="e2e-step">Design</div>
+                <div class="e2e-step">Build</div>
+                <div class="e2e-step">Ship</div>
+            </div>
+
+            <p>As an Android engineer, I don't stop at the Activity layer. I drive features from first conversation to production — partnering with PM, aligning stakeholders, and writing the code myself.</p>
+
+            <h4>Discover & Align</h4>
+            <ul>
+                <li>Partner with PM on Android feature discovery, epic scoping, feasibility, and sprint planning.</li>
+                <li>Coordinate across Android, iOS, web, backend, data science, and vendor teams on scope and timelines.</li>
+                <li>Identified Creator Program vs Recognized Reviewer mutual-exclusion gap; designed APIs and cross-team data flow.</li>
+            </ul>
+
+            <h4>Design & Influence</h4>
+            <ul>
+                <li>Own Android technical design — module architecture, performance strategy, feature flags, and cross-platform alignment.</li>
+                <li>Evaluated seven approaches across five teams for product data on review pages; briefed <strong>8+ senior stakeholders</strong> and drove the adopted path.</li>
+                <li>Proactively surfaced cross-team API migration blocker before downstream Android teams were impacted.</li>
+            </ul>
+
+            <h4>Ship & Grow the Team</h4>
+            <ul>
+                <li>Shipped production Android features with zero accessibility defects across multiple releases.</li>
+                <li>Mentor 2–3 engineers on Android performance, architecture, and test automation; delegate design reviews across workstreams.</li>
             </ul>
         </div>
     </section>
@@ -360,7 +465,7 @@
                 <span>WHIDE / Letstrack · 2019 – 2021</span>
             </div>
             <ul>
-                <li>Built IoT tracking apps with real-time location, background services, and offline-first architecture.</li>
+                <li>Built IoT tracking apps end-to-end — real-time location, background services, and offline-first architecture.</li>
             </ul>
         </div>
 
@@ -370,8 +475,8 @@
                 <span>2014 – 2019</span>
             </div>
             <ul>
-                <li>Praesidium IT Solutions — end-to-end service and payment apps; led architecture and release readiness.</li>
-                <li>Softuvo Solutions, Bytenomi Technologies, TechiTechnologies — consumer apps, internal tools, and mobile fundamentals.</li>
+                <li>Praesidium IT Solutions — owned service and payment apps from architecture through release.</li>
+                <li>Softuvo Solutions, Bytenomi Technologies, TechiTechnologies — consumer apps and internal tools.</li>
             </ul>
         </div>
     </section>
@@ -380,38 +485,41 @@
         <h3>Skills</h3>
         <div class="card">
             <div class="skills-group">
-                <h4>Leadership</h4>
-                <span class="pill">Technical Direction</span>
-                <span class="pill">Cross-Team Leadership</span>
-                <span class="pill">Mentorship</span>
-                <span class="pill">Architecture Reviews</span>
-                <span class="pill">Incident Management</span>
-                <span class="pill">Stakeholder Communication</span>
-            </div>
-            <div class="skills-group">
-                <h4>Platform & Mobile</h4>
+                <h4>Android — Core</h4>
                 <span class="pill">Kotlin</span>
                 <span class="pill">Java</span>
                 <span class="pill">Android SDK</span>
                 <span class="pill">Jetpack Compose</span>
+                <span class="pill">MVVM</span>
+                <span class="pill">Coroutines</span>
+                <span class="pill">Room</span>
+                <span class="pill">ViewStub / RecyclerView</span>
                 <span class="pill">Performance Engineering</span>
-                <span class="pill">System Design</span>
+                <span class="pill">Module Architecture</span>
             </div>
             <div class="skills-group">
-                <h4>Backend & Infrastructure</h4>
+                <h4>Leadership & E2E Delivery</h4>
+                <span class="pill">End-to-End Ownership</span>
+                <span class="pill">Discovery & Requirements</span>
+                <span class="pill">Stakeholder Management</span>
+                <span class="pill">Technical Design</span>
+                <span class="pill">Cross-Team Leadership</span>
+                <span class="pill">Mentorship</span>
+            </div>
+            <div class="skills-group">
+                <h4>Backend & APIs (Supporting)</h4>
                 <span class="pill">GraphQL</span>
                 <span class="pill">Node.js</span>
                 <span class="pill">REST / OpenAPI</span>
                 <span class="pill">Redis / Caching</span>
-                <span class="pill">Kafka</span>
-                <span class="pill">Java 21 Concurrency</span>
+                <span class="pill">System Design</span>
             </div>
             <div class="skills-group">
-                <h4>Quality & Delivery</h4>
+                <h4>Quality & Operations</h4>
                 <span class="pill">A/B Experimentation</span>
                 <span class="pill">CI / Test Automation</span>
-                <span class="pill">Visual Regression Testing</span>
                 <span class="pill">Release Engineering</span>
+                <span class="pill">Visual Regression Testing</span>
             </div>
         </div>
     </section>
