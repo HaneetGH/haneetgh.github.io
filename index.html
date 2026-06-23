@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Haneet Singh Chhabra | Senior Software Engineer (Android)</title>
+    <meta name="description" content="Haneet Singh Chhabra — Senior Software Engineer specializing in Android platform engineering, performance, UGC systems, and cross-team technical leadership at Walmart Global Tech."/>
+    <title>Haneet Singh Chhabra | Senior Software Engineer</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -14,10 +15,14 @@
           --text: #e5e7eb;
           --muted: #9ca3af;
           --accent: #38bdf8;
+          --accent-dim: rgba(56, 189, 248, 0.12);
           --border: #1f2937;
+          --success: #34d399;
         }
 
         * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
         body {
           margin: 0;
           font-family: 'Inter', sans-serif;
@@ -30,97 +35,236 @@
         a:hover { text-decoration: underline; }
 
         .container {
-          max-width: 1250px;
+          max-width: 1100px;
           margin: auto;
-          padding: 56px 24px;
+          padding: 48px 24px 80px;
         }
 
-        header {
-          margin-bottom: 72px;
+        .nav {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 14px 20px;
+          margin-bottom: 28px;
+          font-size: 13px;
+          font-weight: 500;
         }
+
+        .nav a { color: var(--muted); }
+        .nav a:hover { color: var(--accent); text-decoration: none; }
+
+        header { margin-bottom: 56px; }
 
         header h1 {
-          font-size: 46px;
+          font-size: clamp(32px, 5vw, 44px);
           font-weight: 800;
+          letter-spacing: -0.02em;
+          margin: 0;
         }
 
         header h2 {
-          margin-top: 8px;
-          font-size: 20px;
+          margin: 10px 0 0;
+          font-size: 18px;
           color: var(--muted);
           font-weight: 500;
         }
 
         .meta {
-          margin-top: 18px;
+          margin-top: 20px;
           display: flex;
           flex-wrap: wrap;
-          gap: 20px;
+          gap: 10px 20px;
           font-size: 14px;
           color: var(--muted);
         }
 
-        section {
-          margin-bottom: 80px;
-        }
+        section { margin-bottom: 64px; }
 
-        section h3 {
-          font-size: 28px;
-          margin-bottom: 24px;
+        section > h3 {
+          font-size: 24px;
+          font-weight: 700;
+          margin: 0 0 24px;
           border-bottom: 1px solid var(--border);
           padding-bottom: 10px;
+          letter-spacing: -0.01em;
         }
 
         .card {
           background: var(--card);
           border: 1px solid var(--border);
-          border-radius: 16px;
-          padding: 32px;
-          margin-bottom: 32px;
+          border-radius: 14px;
+          padding: 28px 32px;
+          margin-bottom: 24px;
         }
+
+        .card:last-child { margin-bottom: 0; }
+
+        .card h4 {
+          font-size: 18px;
+          font-weight: 700;
+          margin: 0 0 12px;
+          color: var(--text);
+        }
+
+        .card h4:not(:first-child) { margin-top: 28px; }
+
+        .card h5 {
+          font-size: 15px;
+          font-weight: 600;
+          margin: 20px 0 8px;
+          color: var(--accent);
+        }
+
+        .card p { margin: 0 0 12px; color: var(--muted); }
+        .card p strong { color: var(--text); }
 
         .role-header {
           display: flex;
           justify-content: space-between;
           flex-wrap: wrap;
-          gap: 12px;
-          margin-bottom: 18px;
+          gap: 8px 16px;
+          margin-bottom: 16px;
         }
 
         .role-header h4 {
-          font-size: 22px;
-          font-weight: 700;
+          font-size: 20px;
+          margin: 0;
         }
 
         .role-header span {
           font-size: 14px;
           color: var(--muted);
+          white-space: nowrap;
+        }
+
+        .role-tag {
+          display: inline-block;
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          color: var(--accent);
+          background: var(--accent-dim);
+          padding: 4px 10px;
+          border-radius: 6px;
+          margin-bottom: 16px;
         }
 
         ul {
-          padding-left: 22px;
-          margin-top: 12px;
+          padding-left: 20px;
+          margin: 8px 0 0;
         }
 
         ul li {
-          margin-bottom: 12px;
+          margin-bottom: 8px;
+          color: var(--muted);
         }
+
+        ul li strong { color: var(--text); }
+
+        .metrics-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+          gap: 16px;
+        }
+
+        .metric {
+          background: var(--card);
+          border: 1px solid var(--border);
+          border-radius: 12px;
+          padding: 20px;
+          text-align: center;
+        }
+
+        .metric .value {
+          display: block;
+          font-size: 28px;
+          font-weight: 800;
+          color: var(--accent);
+          line-height: 1.2;
+        }
+
+        .metric .label {
+          display: block;
+          font-size: 12px;
+          color: var(--muted);
+          margin-top: 6px;
+          line-height: 1.4;
+        }
+
+        .results-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 12px;
+          margin: 16px 0;
+        }
+
+        .result-pill {
+          background: var(--accent-dim);
+          border: 1px solid rgba(56, 189, 248, 0.25);
+          border-radius: 8px;
+          padding: 8px 14px;
+          font-size: 13px;
+          font-weight: 600;
+          color: var(--accent);
+        }
+
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 14px;
+          margin: 12px 0;
+        }
+
+        th, td {
+          text-align: left;
+          padding: 10px 12px;
+          border-bottom: 1px solid var(--border);
+          color: var(--muted);
+        }
+
+        th {
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+          letter-spacing: 0.04em;
+          color: var(--text);
+        }
+
+        td strong { color: var(--text); }
 
         .pill {
           display: inline-block;
-          padding: 7px 16px;
+          padding: 6px 14px;
           border-radius: 999px;
           border: 1px solid var(--border);
           font-size: 13px;
-          margin: 6px 6px 6px 0;
+          margin: 4px 6px 4px 0;
           background: #020617;
+          color: var(--muted);
+        }
+
+        .leadership-quote {
+          border-left: 3px solid var(--accent);
+          padding: 16px 20px;
+          margin: 0;
+          font-style: italic;
+          color: var(--muted);
+          background: var(--accent-dim);
+          border-radius: 0 10px 10px 0;
         }
 
         footer {
           text-align: center;
-          font-size: 14px;
+          font-size: 13px;
           color: var(--muted);
-          margin-top: 96px;
+          padding-top: 32px;
+          border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+          .card { padding: 20px; }
+          table { font-size: 12px; }
+          th, td { padding: 8px 6px; }
         }
     </style>
 </head>
@@ -129,121 +273,306 @@
 <div class="container">
 
     <header>
+        <nav class="nav">
+            <a href="#summary">Summary</a>
+            <a href="#highlights">H1 2026</a>
+            <a href="#experience-walmart">Walmart</a>
+            <a href="#experience-prior">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+        </nav>
         <h1>Haneet Singh Chhabra</h1>
-        <h2>Senior Software Engineer (Android) · Platform, Performance & Scale</h2>
+        <h2>Senior Software Engineer · UGC Platform, Performance & Scale</h2>
         <div class="meta">
-            <span>Bangalore, India</span>
+            <span>Bengaluru, India</span>
             <span>10+ Years Experience</span>
-            <span>Android · Kotlin · Java · System Design</span>
+            <span>Walmart Global Tech · Commerce Platform</span>
             <span>
-          <a href="https://www.linkedin.com/in/haneetchhabra" target="_blank">LinkedIn</a> ·
-          <a href="https://github.com/HaneetGH" target="_blank">GitHub</a>
-        </span>
+                <a href="https://www.linkedin.com/in/haneetchhabra" target="_blank" rel="noopener">LinkedIn</a> ·
+                <a href="https://github.com/HaneetGH" target="_blank" rel="noopener">GitHub</a>
+            </span>
         </div>
     </header>
 
-    <section>
+    <section id="summary">
         <h3>Professional Summary</h3>
         <p>
-            Senior Android Engineer with over 10 years of experience delivering
-            scalable, high-quality mobile platforms across startups, scale-ups,
-            and Big Tech. Strong expertise in platform engineering, performance
-            optimization, concurrency, experimentation, and cross-functional
-            collaboration. Currently driving high-impact initiatives at Walmart
-            Global Tech and recognized multiple times with Walmart Bravo Awards
-            for engineering excellence and accessibility-compliant delivery.
+            Senior Software Engineer with 10+ years of experience building and scaling
+            customer-facing mobile platforms across startups, scale-ups, and Big Tech.
+            Currently on the UGC team at Walmart Global Tech, driving Android performance
+            engineering, UGC 2.0 orchestration-layer development, automation infrastructure,
+            and cross-team architecture. Multiple-time Walmart Bravo Award recipient for
+            engineering excellence and accessibility-compliant delivery.
         </p>
+        <ul>
+            <li><strong>Performance:</strong> Cut Reviews module render time from 380ms to 96ms (74% improvement) on one of Walmart's highest-traffic pages through seven targeted optimizations.</li>
+            <li><strong>Platform:</strong> Led UGC 2.0 Orchestration Layer work — SiteFacing Client, IRO REST Client, and core GraphQL resolvers now serving as the baseline for all new OL integrations.</li>
+            <li><strong>Architecture:</strong> Investigated 7 alternatives across 5 teams for dynamic item enrichment; briefed 8 senior stakeholders and recommended the production-proven IRO + LRU cache path.</li>
+            <li><strong>Delivery:</strong> 69 merged PRs and 49,001+ lines in H1 2026 across 6 repositories — Android, backend OL, OpenAPI clients, and CI automation.</li>
+        </ul>
     </section>
 
-    <!-- WALMART -->
-    <section>
+    <section id="highlights">
+        <h3>H1 2026 Highlights</h3>
+        <p style="color: var(--muted); margin: -12px 0 24px;">January – June 2026 · UGC Team · Commerce Platform</p>
+
+        <div class="metrics-grid">
+            <div class="metric"><span class="value">69</span><span class="label">Merged PRs</span></div>
+            <div class="metric"><span class="value">49K+</span><span class="label">Lines Written</span></div>
+            <div class="metric"><span class="value">584</span><span class="label">Files Changed</span></div>
+            <div class="metric"><span class="value">6</span><span class="label">Repositories</span></div>
+            <div class="metric"><span class="value">336</span><span class="label">Career PRs</span></div>
+            <div class="metric"><span class="value">8+</span><span class="label">Stakeholders Briefed</span></div>
+            <div class="metric"><span class="value">2–3</span><span class="label">Engineers Mentored</span></div>
+            <div class="metric"><span class="value">5</span><span class="label">Teams (IRO Investigation)</span></div>
+        </div>
+
+        <div class="card" style="margin-top: 24px;">
+            <h4>GitHub Delivery by Repository</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Repository</th>
+                        <th>PRs</th>
+                        <th>Lines</th>
+                        <th>Focus</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>walmart-glass</strong></td>
+                        <td>24</td>
+                        <td>+34,487</td>
+                        <td>Android — performance, Camera, UGC modules, Video PoC</td>
+                    </tr>
+                    <tr>
+                        <td><strong>glass-automation</strong></td>
+                        <td>20</td>
+                        <td>+1,428</td>
+                        <td>CI automation — Looper, R2 stability, login fixes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ce-ugc-service</strong></td>
+                        <td>11</td>
+                        <td>+8,841</td>
+                        <td>OL backend — Seller Reviews, Sampling, IRO REST client</td>
+                    </tr>
+                    <tr>
+                        <td><strong>openapi-clients</strong></td>
+                        <td>9</td>
+                        <td>+1,517</td>
+                        <td>UGC 2.0 SiteFacing client, backward compatibility</td>
+                    </tr>
+                    <tr>
+                        <td><strong>services/ugc</strong></td>
+                        <td>2</td>
+                        <td>+2,581</td>
+                        <td>UGC backend</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ugc-one-test-infra</strong></td>
+                        <td>3</td>
+                        <td>+147</td>
+                        <td>Test infrastructure</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <span class="role-tag">Performance Engineering</span>
+            <h4>Reviews Module — Item Page (PDP)</h4>
+            <p>
+                The Reviews component was taking ~380ms to render, causing visible lag on one of
+                Walmart's highest-traffic pages. Delivered seven targeted optimizations to the
+                rendering pipeline.
+            </p>
+            <ul>
+                <li><strong>ViewStub lazy inflation</strong> — eliminated ~220ms of view construction by deferring inflation until the component is about to appear</li>
+                <li><strong>Dirty-check guards</strong> — prevented unnecessary re-binds when underlying data had not changed</li>
+                <li><strong>View pooling & adapter caching</strong> — reduced allocation churn and repeated lookups during fast scroll</li>
+                <li><strong>Deferred analytics</strong> — moved event dispatch off the main thread, post-layout</li>
+                <li><strong>Layout hierarchy flattening</strong> — reduced measure/layout pass cost across sub-components</li>
+            </ul>
+            <div class="results-row">
+                <span class="result-pill">380ms → 96ms render (−74%)</span>
+                <span class="result-pill">CPU −72%</span>
+                <span class="result-pill">Dropped frames −73%</span>
+                <span class="result-pill">UI jank eliminated</span>
+            </div>
+
+            <h5>Dashboard API Benchmarking</h5>
+            <p>
+                Benchmarked Dashboard API v1 vs v2 using Automaton. Average latency improved ~240ms (~7%);
+                P90/P95/P99 improved ~330ms+ with 0% error rate. Deep-dived User Dashboard 1.0 architecture
+                to inform UGC 2.0 Dashboard API design.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="role-tag">UGC 2.0 Platform — OL Lead</span>
+            <h4>Orchestration Layer Development</h4>
+            <p>
+                Ground-up rebuild of Walmart's review platform. Owned extending the Node.js GraphQL OL
+                to support UGC 2.0 — building all required clients from scratch and establishing patterns
+                the team now follows.
+            </p>
+
+            <h5>SiteFacing Client</h5>
+            <ul>
+                <li>Designed and implemented the OpenAPI-based SiteFacing Client — foundational integration with UGC 2.0 backend</li>
+                <li>Resolved the open architectural question of Base URL adoption within the OL layer</li>
+                <li>Base URL externalized via CCM; backward compatibility layer for in-flight migration requests</li>
+            </ul>
+
+            <h5>IRO REST Client</h5>
+            <ul>
+                <li>Built centralized item information retrieval with batch enrichment and request-level deduplication</li>
+                <li><code>isIroEnrichmentEnabled</code> feature flag via CCM for zero-downtime rollout</li>
+                <li>Solved dynamic post-fetch enrichment — up to 10 variant item IDs per review page, known only after review retrieval</li>
+            </ul>
+
+            <h5>Resolvers Implemented</h5>
+            <table>
+                <thead>
+                    <tr><th>Resolver</th><th>Description</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>GetSellerReviews</strong></td><td>Fetches seller-specific reviews via OL to UGC 2.0 backend</td></tr>
+                    <tr><td><strong>SubmitSellerReview</strong></td><td>Enables sellers to submit reviews through the OL</td></tr>
+                    <tr><td><strong>SamplingInvite</strong> (v1 + v2)</td><td>Product sampling invitation flows; v2 added new enrollment API</td></tr>
+                </tbody>
+            </table>
+
+            <p><strong>BASE URL migration blocker:</strong> Proactively identified and escalated a cross-team blocker before downstream teams hit it — preventing retroactive fixes across all UGC 2.0 clients.</p>
+        </div>
+
+        <div class="card">
+            <span class="role-tag">Architecture</span>
+            <h4>IRO Investigation — 7 Solutions, 5 Teams</h4>
+            <p>
+                UGC 2.0 needs item metadata dynamically per review page but has no internal catalog store.
+                A single review page can reference up to 10 variant item IDs — only determinable after reviews are retrieved.
+            </p>
+            <table>
+                <thead>
+                    <tr><th>Option</th><th>Finding</th><th>Decision</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>IQS</td><td>4–8 week onboarding; Imperium rules not applied</td><td>❌ Ruled out</td></tr>
+                    <tr><td>P13N Cassandra</td><td>Stores ML signals, not item metadata</td><td>❌ Ruled out</td></tr>
+                    <tr><td>Preso / Search</td><td>No item-ID retrieval; depends on IRO</td><td>❌ Ruled out</td></tr>
+                    <tr><td>Item Service OL 4007</td><td>Extra hop; same IRO dependency</td><td>❌ Ruled out</td></tr>
+                    <tr><td>GraphQL Federation</td><td>Does not reduce IRO traffic</td><td>❌ Ruled out</td></tr>
+                    <tr><td>UGC-owned storage</td><td>Operational overhead without sufficient benefit</td><td>❌ Ruled out</td></tr>
+                    <tr><td><strong>IRO + LRU Cache</strong></td><td>Mirrors CLS production pattern; CCM-configurable TTL</td><td>✅ Recommended</td></tr>
+                </tbody>
+            </table>
+            <p>Engaged IQS, P13N, Preso/Search, Item Service OL, and IRO teams. Communicated full tradeoff analysis to 8 senior stakeholders.</p>
+
+            <h5>UGC MegaCache — Proposed Design</h5>
+            <p>Platform-wide Redis cache (~550k items, ~550MB, 1-day TTL) with Kafka event-driven invalidation + TTL fallback.</p>
+            <div class="results-row">
+                <span class="result-pill">Peak IRO TPS: 15,000 → 2,250 (−85%)</span>
+                <span class="result-pill">Avg IRO TPS: ~1,157 → ~173–231</span>
+                <span class="result-pill">No infra changes required</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <span class="role-tag">Automation & CI</span>
+            <h4>Infrastructure & Incident Management</h4>
+            <ul>
+                <li>Enabled Skip functionality across NRP, production, and iOS suites — reduced false failures by <strong>~30–35%</strong></li>
+                <li>Maintained <strong>48+ consecutive stable</strong> R2 automation runs across multiple sprints</li>
+                <li>Replaced manual performance test triggers with cron-based Automaton execution via Looper</li>
+                <li>Resolved critical Login, Looper, and Integration test failures restoring CI stability</li>
+            </ul>
+            <p>
+                <strong>Incident:</strong> When automation success dropped to ~48% mid-sprint, detected root cause,
+                created formal incident, coordinated cross-team resolution, and restored stability without
+                missing delivery commitments.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="role-tag">Video Reviews</span>
+            <h4>Engineering Foundation (Self-Initiated)</h4>
+            <ul>
+                <li>Authored BV Video Upload API engineering reference — resolved multipart vs chunked confusion; Progressive Submission <strong>16% faster on average</strong>, up to <strong>85% faster</strong> for large files</li>
+                <li>Analyzed 20 BV videos — identified non-deterministic 9:16 encoding (BV-side bug); defined <strong>±2px tolerance</strong> fix for all platforms</li>
+                <li>Designed cross-platform metadata extraction — O(1) header-only MP4 read in <strong>5–50ms</strong>, zero frame decoding, lossless trim via passthrough muxing</li>
+                <li>Delivered Android PoC, 10 user stories with acceptance criteria, 3-sprint timeline, and 5 R2 automation test cases</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <span class="role-tag">Features & Innovation</span>
+            <h4>Shipped & Explored</h4>
+            <table>
+                <thead>
+                    <tr><th>Feature / Initiative</th><th>Platform</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Camera Image Upload in Simplified WAR</td><td>Android</td><td>VQA and Analytics sign-offs</td></tr>
+                    <tr><td>Multi-Image Selection</td><td>Android, iOS, Web</td><td>Cross-platform alignment</td></tr>
+                    <tr><td>Tempo-based Reviewer Community page</td><td>Android</td><td>New customer-facing UGC surface</td></tr>
+                    <tr><td>Direct Camera Intro in Single WAR Page</td><td>Android</td><td>CCM flag + feature analytics</td></tr>
+                    <tr><td>BV Passkey parameter handling</td><td>Android</td><td>Coordinated testing with BV team</td></tr>
+                    <tr><td>Context Image Search PoC</td><td>Android + DS/Search</td><td>3-phase prototype; end-to-end latency &lt;2s</td></tr>
+                </tbody>
+            </table>
+
+            <h5>Internal Tools</h5>
+            <ul>
+                <li><strong>PixelMind</strong> — Visual regression framework (pHash + DINOv2 + EasyOCR); FAST_PASS ~7ms, ML Zone ~500ms; progressed from PoC to Dev VM deployment</li>
+                <li><strong>Wibey Automation Status Skill</strong> — Daily automation status reports with zero manual overhead</li>
+                <li><strong>Release Sign-off SOP</strong> — Standardized validation process adopted as team standard</li>
+                <li><strong>Creator Program vs RRP Mutual Exclusion</strong> — Identified constraint, designed 3 APIs and cross-team data flow</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <span class="role-tag">Leadership</span>
+            <h4>Mentoring & Team Development</h4>
+            <ul>
+                <li>Guided 2–3 junior engineers on Android performance, OpenAPI client generation, and R2 test automation</li>
+                <li>Documented SiteFacing Client pattern as UGC 2.0 OL baseline — juniors now build clients independently</li>
+                <li>Delegated design review ownership across 3 active workstreams, reducing single-point-of-failure dependency</li>
+                <li>Drove PixelMind and Release SOP from personal tooling to shared team standards</li>
+            </ul>
+            <p class="leadership-quote">
+                I am not optimizing for task completion. I am optimizing for impact — building patterns,
+                tools, and processes that last beyond the ticket.
+            </p>
+        </div>
+    </section>
+
+    <section id="experience-walmart">
         <h3>Experience — Walmart Global Tech</h3>
 
         <div class="card">
             <div class="role-header">
-                <h4>Senior Software Engineer — Android</h4>
+                <h4>Senior Software Engineer</h4>
                 <span>Feb 2023 – Present</span>
             </div>
+            <p><strong>Team:</strong> UGC (User-Generated Content) · Commerce Platform · IDC, Bengaluru</p>
+            <p><strong>Product:</strong> Walmart — Shopping & Savings (Android) + UGC 2.0 Platform</p>
 
-            <p><strong>Product:</strong> Walmart — Shopping & Savings (Android)</p>
-
-            <h4>UGC Platform & Feature Ownership</h4>
+            <h4>Earlier Highlights (2023–2025)</h4>
             <ul>
-                <li>
-                    Led migration of the UGC (User Generated Content) module from a legacy
-                    Item Page–bound implementation to a dedicated, standalone module.
-                </li>
-                <li>
-                    Executed the migration with zero production regressions, no user-facing
-                    bugs, and full backward compatibility across supported app versions.
-                </li>
-            </ul>
-
-            <h4>User Dashboard & Reviewer Community</h4>
-            <ul>
-                <li>
-                    Designed and implemented the Reviewer Community experience surfaced
-                    through the User Dashboard, delivering full feature parity and
-                    end-to-end functionality.
-                </li>
-                <li>
-                    Integrated multiple backend services and UI flows to support reviewer
-                    engagement, content visibility, and state consistency.
-                </li>
-            </ul>
-
-            <h4>Dashboard Parallelization & Concurrency</h4>
-            <ul>
-                <li>Architected a parallel API fan-out model to replace sequential dashboard data loading.</li>
-                <li>Executed concurrent domain-level calls (items, incentives, sellers, drafts, sampling, categories, stats).</li>
-                <li>Collaborated with backend teams leveraging Java 21 concurrency principles.</li>
-                <li>Implemented timeout controls, partial-failure handling, and graceful degradation patterns.</li>
-            </ul>
-
-            <h4>Review & PDP API Optimization</h4>
-            <ul>
-                <li>Led Variant Reviews Caching using CCM-driven eligibility and controlled rollout.</li>
-                <li>Reduced 1–1.6B+ backend API calls per day and improved latency by ~21%.</li>
-                <li>Delivered sustained infrastructure savings without negative business impact.</li>
-            </ul>
-
-            <h4>Cross-Team Leadership — Conduit Group</h4>
-            <ul>
-                <li>
-                    Acted as Android technical lead for cross-team initiatives with the
-                    Conduit group, supporting experiences where Walmart sells used or
-                    refurbished products.
-                </li>
-                <li>
-                    Coordinated requirements, timelines, and technical decisions across
-                    multiple backend, web, and product teams.
-                </li>
-            </ul>
-
-            <h4>Experimentation, Automation & Leadership</h4>
-            <ul>
-                <li>Designed and analyzed A/B experiments with clear success metrics and guardrails.</li>
-                <li>
-                    Led automation strategy and execution for Android release validation,
-                    improving signal quality and reducing manual effort.
-                </li>
-                <li>
-                    Served as cross-team technical owner and mentor across Android and backend teams.
-                </li>
-            </ul>
-
-            <h4>Recognition</h4>
-            <ul>
-                <li>
-                    Multiple-time Walmart Bravo Award recipient for delivering high-impact,
-                    production-grade features with zero ADA defects.
-                </li>
+                <li>Led UGC module migration from legacy Item Page–bound implementation to a dedicated standalone module — zero production regressions, full backward compatibility</li>
+                <li>Designed Reviewer Community experience on User Dashboard with full feature parity and multi-service integration</li>
+                <li>Architected parallel API fan-out for Dashboard data loading with timeout controls, partial-failure handling, and graceful degradation</li>
+                <li>Led Variant Reviews Caching — reduced <strong>1–1.6B+ backend API calls/day</strong> and improved latency by ~21%</li>
+                <li>Android technical lead for Conduit group cross-team initiatives (used/refurbished products)</li>
+                <li>Designed A/B experiments, led Android release automation strategy, and mentored across Android and backend teams</li>
+                <li>Multiple-time <strong>Walmart Bravo Award</strong> recipient for high-impact delivery with zero ADA defects</li>
             </ul>
         </div>
     </section>
 
-    <!-- PRE WALMART -->
-    <section>
+    <section id="experience-prior">
         <h3>Experience — Prior to Walmart</h3>
 
         <div class="card">
@@ -252,9 +581,8 @@
                 <span>Rakuten India · Oct 2021 – Jan 2023</span>
             </div>
             <ul>
-                <li>Developed and scaled Android features for Rakuten LINK consumer and enterprise applications.</li>
-                <li>Worked on chat, messaging, offline data handling, and database optimization.</li>
-                <li>Improved application stability, performance, and maintainability.</li>
+                <li>Developed and scaled Android features for Rakuten LINK consumer and enterprise applications</li>
+                <li>Chat, messaging, offline data handling, and database optimization</li>
             </ul>
         </div>
 
@@ -264,9 +592,7 @@
                 <span>WHIDE / Letstrack · Feb 2019 – Oct 2021</span>
             </div>
             <ul>
-                <li>Built IoT-driven Android applications for customers and delivery partners.</li>
-                <li>Implemented real-time tracking, background services, and offline-first sync models.</li>
-                <li>Collaborated closely with backend and operations teams.</li>
+                <li>Built IoT-driven Android apps with real-time tracking, background services, and offline-first sync</li>
             </ul>
         </div>
 
@@ -276,8 +602,7 @@
                 <span>Praesidium IT Solutions · Oct 2017 – Jan 2019</span>
             </div>
             <ul>
-                <li>Owned end-to-end Android development for service and payment-based applications.</li>
-                <li>Led architecture decisions, integrations, and release readiness.</li>
+                <li>End-to-end Android development for service and payment applications; led architecture and release readiness</li>
             </ul>
         </div>
 
@@ -287,7 +612,7 @@
                 <span>Softuvo Solutions · Dec 2016 – Jun 2017</span>
             </div>
             <ul>
-                <li>Developed consumer Android applications across document storage and media domains.</li>
+                <li>Consumer Android applications across document storage and media domains</li>
             </ul>
         </div>
 
@@ -297,7 +622,7 @@
                 <span>Bytenomi Technologies · Feb 2015 – Nov 2016</span>
             </div>
             <ul>
-                <li>Built internal Android tools and utility applications.</li>
+                <li>Internal Android tools and utility applications</li>
             </ul>
         </div>
 
@@ -307,31 +632,40 @@
                 <span>TechiTechnologies · Aug 2014 – Feb 2015</span>
             </div>
             <ul>
-                <li>Developed early Android applications and established mobile fundamentals.</li>
+                <li>Early Android applications; established mobile development fundamentals</li>
             </ul>
         </div>
     </section>
 
-    <section>
+    <section id="skills">
         <h3>Technical Skills</h3>
         <div>
             <span class="pill">Kotlin</span>
             <span class="pill">Java</span>
             <span class="pill">Android SDK</span>
             <span class="pill">Jetpack Compose</span>
+            <span class="pill">ViewStub / RecyclerView</span>
             <span class="pill">MVVM</span>
             <span class="pill">Coroutines</span>
             <span class="pill">Room</span>
-            <span class="pill">REST / GraphQL</span>
+            <span class="pill">Node.js</span>
+            <span class="pill">GraphQL</span>
+            <span class="pill">OpenAPI</span>
+            <span class="pill">REST</span>
+            <span class="pill">Redis / Caching</span>
+            <span class="pill">Kafka</span>
             <span class="pill">Java 21 Concurrency</span>
-            <span class="pill">Performance Optimization</span>
+            <span class="pill">Performance Engineering</span>
             <span class="pill">A/B Experimentation</span>
-            <span class="pill">Automation (R2)</span>
+            <span class="pill">CI Automation (R2 / Looper)</span>
+            <span class="pill">Visual Regression (pHash / DINOv2)</span>
+            <span class="pill">MP4 / Video Streaming</span>
             <span class="pill">System Design</span>
+            <span class="pill">Rust (in progress)</span>
         </div>
     </section>
 
-    <section>
+    <section id="education">
         <h3>Education</h3>
         <div class="card">
             <strong>B.Tech — Computer Science & Engineering</strong><br/>
@@ -340,7 +674,7 @@
     </section>
 
     <footer>
-        © 2025 Haneet Singh Chhabra · Senior Android Engineer
+        © 2026 Haneet Singh Chhabra · Senior Software Engineer
     </footer>
 
 </div>
