@@ -267,6 +267,36 @@
           margin-top: 8px;
         }
 
+        .highlight-box {
+          background: var(--accent-dim);
+          border: 1px solid rgba(56, 189, 248, 0.25);
+          border-left: 4px solid var(--accent);
+          border-radius: 0 12px 12px 0;
+          padding: 20px 24px;
+          margin: 16px 0 8px;
+        }
+
+        .highlight-box .label {
+          display: inline-block;
+          font-size: 11px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: var(--accent);
+          margin-bottom: 10px;
+        }
+
+        .highlight-box ul {
+          margin: 0;
+          padding-left: 18px;
+        }
+
+        .highlight-box li {
+          margin-bottom: 8px;
+        }
+
+        .highlight-box li:last-child { margin-bottom: 0; }
+
         .prior-compact .card { padding: 20px 28px; }
         .prior-compact ul { margin: 0; }
         .prior-compact li { margin-bottom: 6px; }
@@ -308,7 +338,7 @@
         <div class="meta">
             <span>Bengaluru, India</span>
             <span>10+ Years · Android Specialist</span>
-            <span>Kotlin · Java · Jetpack · Performance · GraphQL</span>
+            <span>Kotlin · Jetpack · GenAI · GCP · GraphQL</span>
             <span>
                 <a href="https://www.linkedin.com/in/haneetchhabra" target="_blank" rel="noopener">LinkedIn</a>
             </span>
@@ -379,6 +409,16 @@
             </div>
             <p class="role-context">Walmart Shopping App · Reviews & User-Generated Content</p>
 
+            <div class="highlight-box">
+                <span class="label">Product Alignment & Stakeholder Leadership</span>
+                <ul>
+                    <li><strong>PM & Product</strong> — lead epic discovery, requirements workshops, feasibility reviews, and sprint scoping for Android features (video reviews, camera upload, reviewer community).</li>
+                    <li><strong>Senior Leadership</strong> — briefed 8+ stakeholders on architecture tradeoffs, caching strategy, and reviews platform direction with documented analysis.</li>
+                    <li><strong>Cross-team alignment</strong> — coordinate Android, iOS, web, backend, data science, search, and vendor (Bazaarvoice) teams on scope, APIs, and rollout timelines.</li>
+                    <li><strong>Product decisions</strong> — identified Creator vs Reviewer Program mutual-exclusion gap; drove API design and alignment across both program teams.</li>
+                </ul>
+            </div>
+
             <h4>Android Performance & Architecture</h4>
             <ul>
                 <li>Owned reviews UI performance on the item detail page — render time <strong>380ms → 96ms</strong>, CPU <strong>−72%</strong>, dropped frames <strong>−73%</strong>, jank eliminated on one of Walmart's most-visited Android screens.</li>
@@ -389,9 +429,10 @@
 
             <h4>Android Features — Owned E2E</h4>
             <ul>
-                <li>Camera upload, multi-image selection, reviewer community, and direct camera entry — owned from PM discovery and technical design through Android implementation and iOS/web alignment.</li>
-                <li>Self-initiated video reviews on Android — vendor API research, metadata extraction design, PoC, user stories, and sprint plan.</li>
-                <li>AI image search prototype on Android with data science and search teams — scoped, built, and delivered under 2 seconds end-to-end.</li>
+                <li>Camera upload and multi-image selection — presigned URL flows, image compression, and direct-to-cloud upload integration on Android.</li>
+                <li>Reviewer community and direct camera entry — owned from PM discovery through Android implementation and iOS/web alignment.</li>
+                <li>Self-initiated video reviews on Android — vendor API research, multipart upload design, metadata extraction, PoC, and sprint plan.</li>
+                <li>GenAI image search prototype — partnered with data science and search teams; vector similarity and on-device model integration on Android (&lt;2s latency).</li>
                 <li>Android technical lead for used/refurbished product experiences — coordinated delivery across backend, web, and product teams.</li>
             </ul>
 
@@ -491,35 +532,62 @@
                 <span class="pill">Android SDK</span>
                 <span class="pill">Jetpack Compose</span>
                 <span class="pill">MVVM</span>
-                <span class="pill">Coroutines</span>
+                <span class="pill">Coroutines & Flow</span>
                 <span class="pill">Room</span>
+                <span class="pill">CameraX</span>
+                <span class="pill">WorkManager</span>
                 <span class="pill">ViewStub / RecyclerView</span>
                 <span class="pill">Performance Engineering</span>
                 <span class="pill">Module Architecture</span>
             </div>
             <div class="skills-group">
+                <h4>AI & Modern Engineering</h4>
+                <span class="pill">GenAI / LLM Integration</span>
+                <span class="pill">Vector Search</span>
+                <span class="pill">AI-Assisted Development</span>
+                <span class="pill">Cursor</span>
+                <span class="pill">Prompt Engineering</span>
+                <span class="pill">ML Model Integration (on-device)</span>
+            </div>
+            <div class="skills-group">
+                <h4>Cloud, Media & Upload</h4>
+                <span class="pill">Google Cloud Platform</span>
+                <span class="pill">Firebase</span>
+                <span class="pill">Presigned URLs</span>
+                <span class="pill">Multipart Upload</span>
+                <span class="pill">Image & Video Upload</span>
+                <span class="pill">MP4 Metadata Extraction</span>
+                <span class="pill">CDN / Object Storage</span>
+            </div>
+            <div class="skills-group">
                 <h4>Leadership & E2E Delivery</h4>
                 <span class="pill">End-to-End Ownership</span>
-                <span class="pill">Discovery & Requirements</span>
+                <span class="pill">Product Discovery</span>
                 <span class="pill">Stakeholder Management</span>
                 <span class="pill">Technical Design</span>
                 <span class="pill">Cross-Team Leadership</span>
                 <span class="pill">Mentorship</span>
             </div>
             <div class="skills-group">
-                <h4>Backend & APIs (Supporting)</h4>
+                <h4>Backend & APIs</h4>
                 <span class="pill">GraphQL</span>
                 <span class="pill">Node.js</span>
                 <span class="pill">REST / OpenAPI</span>
                 <span class="pill">Redis / Caching</span>
+                <span class="pill">Kafka</span>
+                <span class="pill">Java 21 Concurrency</span>
+                <span class="pill">Feature Flags / Remote Config</span>
                 <span class="pill">System Design</span>
             </div>
             <div class="skills-group">
-                <h4>Quality & Operations</h4>
+                <h4>Quality, DevOps & Tools</h4>
                 <span class="pill">A/B Experimentation</span>
                 <span class="pill">CI / Test Automation</span>
+                <span class="pill">GitHub Actions</span>
                 <span class="pill">Release Engineering</span>
-                <span class="pill">Visual Regression Testing</span>
+                <span class="pill">Visual Regression (pHash / ML)</span>
+                <span class="pill">Accessibility (ADA)</span>
+                <span class="pill">Analytics Instrumentation</span>
             </div>
         </div>
     </section>
