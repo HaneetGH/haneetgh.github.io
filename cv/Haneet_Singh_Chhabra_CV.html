@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Haneet Singh Chhabra - Resume</title>
+    <style>
+        @page {
+            size: letter;
+            margin: 0.46in 0.54in;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 9.75pt;
+            line-height: 1.38;
+            color: #1a1a1a;
+            background: #fff;
+            max-width: 7.4in;
+            margin: 0 auto;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        header {
+            border-bottom: 2px solid #0f4c81;
+            padding-bottom: 7px;
+            margin-bottom: 8px;
+        }
+
+        h1 {
+            font-size: 22pt;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #0f172a;
+            line-height: 1.08;
+        }
+
+        .headline {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #0f4c81;
+            margin-top: 2px;
+        }
+
+        .contact {
+            margin-top: 5px;
+            font-size: 8.75pt;
+            color: #374151;
+            line-height: 1.45;
+        }
+
+        .contact a {
+            color: #0f4c81;
+            text-decoration: none;
+        }
+
+        section { margin-bottom: 9px; }
+
+        h2 {
+            font-size: 10pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #0f4c81;
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+        }
+
+        .summary { color: #374151; }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        .metric {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            border-radius: 3px;
+            padding: 5px 6px;
+            text-align: center;
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 10.5pt;
+            color: #0f4c81;
+            line-height: 1.15;
+        }
+
+        .metric span {
+            display: block;
+            font-size: 7.25pt;
+            color: #4b5563;
+            margin-top: 1px;
+            line-height: 1.28;
+        }
+
+        .current-role {
+            background: #f8fafc;
+            border: 1px solid #dbeafe;
+            border-left: 4px solid #0f4c81;
+            border-radius: 0 6px 6px 0;
+            padding: 9px 11px 7px;
+        }
+
+        .role-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 10px;
+            page-break-after: avoid;
+        }
+
+        .role-title {
+            font-size: 10.5pt;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .role-date {
+            font-size: 8.75pt;
+            font-weight: 600;
+            color: #0f4c81;
+            white-space: nowrap;
+        }
+
+        .role-meta {
+            font-size: 8.75pt;
+            color: #4b5563;
+            margin: 2px 0 7px;
+        }
+
+        .role-meta strong { color: #1f2937; }
+
+        .subheading {
+            font-size: 8.75pt;
+            font-weight: 700;
+            color: #0f4c81;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin: 6px 0 2px;
+            page-break-after: avoid;
+        }
+
+        .subheading:first-of-type { margin-top: 0; }
+
+        ul { padding-left: 14px; margin: 0; }
+        li { margin-bottom: 2px; color: #374151; }
+        li strong { color: #111827; }
+
+        .award {
+            font-size: 8.75pt;
+            font-weight: 600;
+            color: #0f4c81;
+            margin-top: 5px;
+            padding-top: 4px;
+            border-top: 1px dashed #cbd5e1;
+        }
+
+        .earlier-section {
+            margin-top: 10px;
+            padding-top: 8px;
+            border-top: 2px solid #64748b;
+        }
+
+        .earlier-intro {
+            font-size: 8.5pt;
+            color: #4b5563;
+            margin: 0 0 6px;
+        }
+
+        .prior-roles { display: flex; flex-direction: column; gap: 5px; }
+
+        .prior-role {
+            display: grid;
+            grid-template-columns: 1.35in 1fr;
+            gap: 4px 10px;
+            align-items: start;
+            border: 1px solid #e5e7eb;
+            border-left: 3px solid #64748b;
+            border-radius: 0 4px 4px 0;
+            padding: 6px 9px;
+            background: #fafafa;
+            page-break-inside: avoid;
+        }
+
+        .prior-left .role-title {
+            font-size: 9.25pt;
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.25;
+        }
+
+        .prior-company {
+            font-size: 8.5pt;
+            font-weight: 600;
+            color: #0f4c81;
+            margin-top: 2px;
+        }
+
+        .prior-date {
+            font-size: 8pt;
+            color: #6b7280;
+            margin-top: 1px;
+        }
+
+        .prior-role li {
+            font-size: 9.25pt;
+            margin-bottom: 1px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.65in;
+            gap: 14px;
+            align-items: start;
+            page-break-inside: avoid;
+        }
+
+        .skills-block { margin-bottom: 3px; }
+        .skills-block:last-child { margin-bottom: 0; }
+
+        .skills-label {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .skills-list {
+            font-size: 8.5pt;
+            color: #374151;
+        }
+
+        .education-box {
+            border: 1px solid #e5e7eb;
+            border-radius: 4px;
+            padding: 8px 10px;
+            background: #f8fafc;
+        }
+
+        .education-box h2 {
+            margin-bottom: 4px;
+            font-size: 9pt;
+        }
+
+        .education-degree {
+            font-size: 9pt;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .education-school {
+            color: #374151;
+            font-size: 8.75pt;
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Haneet Singh Chhabra</h1>
+    <p class="headline">Senior Software Engineer (Android) | E2E Technical Lead</p>
+    <p class="contact">
+        Bengaluru, India &nbsp;|&nbsp;
+        <a href="mailto:haneetatwork@gmail.com">haneetatwork@gmail.com</a> &nbsp;|&nbsp;
+        <a href="https://www.linkedin.com/in/haneetchhabra">linkedin.com/in/haneetchhabra</a> &nbsp;|&nbsp;
+        <a href="https://haneetgh.github.io">haneetgh.github.io</a>
+    </p>
+    <p class="contact">10+ Years &nbsp;|&nbsp; Kotlin &middot; Jetpack Compose &middot; Next.js &middot; GenAI &middot; GCP &middot; GraphQL</p>
+</header>
+
+<section>
+    <h2>Professional Summary</h2>
+    <p class="summary">
+        Senior Android engineer, 10+ years, currently at Walmart Global Tech (Reviews &amp; UGC, Shopping App).
+        Owns features end-to-end: PM discovery, stakeholder alignment, architecture, hands-on development, and backend/API when needed.
+        Also ships full-stack products with Next.js, serverless data, AI pipelines, and payments (Swaneet, BillSplit).
+        Billion-request-scale performance wins, multiple Bravo Awards; 7 prior years at Rakuten, IoT, and startups.
+    </p>
+</section>
+
+<section>
+    <h2>Key Impact</h2>
+    <div class="metrics">
+        <div class="metric"><strong>74%</strong><span>Faster reviews UI on highest-traffic product pages</span></div>
+        <div class="metric"><strong>1.6B+</strong><span>Backend API calls eliminated per day</span></div>
+        <div class="metric"><strong>8+</strong><span>Senior stakeholders briefed on architecture decisions</span></div>
+        <div class="metric"><strong>5 teams</strong><span>Coordinated for system design and delivery</span></div>
+    </div>
+</section>
+
+<section>
+    <h2>Experience</h2>
+
+    <div class="current-role">
+        <div class="role-top">
+            <span class="role-title">Senior Software Engineer - Android</span>
+            <span class="role-date">Feb 2023 - Present</span>
+        </div>
+        <p class="role-meta"><strong>Walmart Global Tech</strong> &middot; Shopping App &middot; Reviews &amp; User-Generated Content</p>
+
+        <p class="subheading">Product &amp; Stakeholders</p>
+        <ul>
+            <li>Partner with PM on epic discovery, feasibility, sprint scoping, and A/B experiments with clear success metrics.</li>
+            <li>Briefed 8+ senior stakeholders on architecture tradeoffs, caching strategy, and platform decisions with written analysis.</li>
+            <li>Aligned iOS, web, backend, search, data science, and vendor (Bazaarvoice) on APIs, camera flows, and rollout.</li>
+            <li>Self-initiated video reviews from discovery through PoC; resolved Creator vs Reviewer Program gap via cross-team API design.</li>
+        </ul>
+
+        <p class="subheading">Engineering &amp; Performance</p>
+        <ul>
+            <li>Reviews UI on item detail page: render time <strong>380ms to 96ms</strong>, CPU <strong>-72%</strong>, dropped frames <strong>-73%</strong>, jank eliminated on highest-traffic screens.</li>
+            <li>Variant reviews caching: reduced <strong>1-1.6B API calls/day</strong>, ~21% latency improvement, zero business impact.</li>
+            <li>Migrated reviews to standalone module (zero regressions); parallel dashboard loading with graceful degradation.</li>
+            <li>Shipped camera upload, multi-image selection, and reviewer community; owned PM discovery through iOS/web alignment.</li>
+            <li>Video reviews E2E: vendor API research, multipart upload, metadata extraction, PoC, and sprint delivery plan.</li>
+            <li>GenAI image search prototype with data science and search teams; on-device model integration under 2s latency.</li>
+            <li>GraphQL orchestration, OpenAPI clients, Redis caching (~85% projected peak load cut); surfaced cross-team API blocker early.</li>
+        </ul>
+
+        <p class="subheading">Quality &amp; Leadership</p>
+        <ul>
+            <li>Built PixelMind (visual regression testing) and release sign-off SOP - adopted as team standards.</li>
+            <li><strong>48+ consecutive</strong> stable CI runs; led incident response when automation dropped to ~48%; mentor 2-3 engineers.</li>
+        </ul>
+        <p class="award">Multiple-time Bravo Award | Zero accessibility defects</p>
+    </div>
+
+    <div class="earlier-section">
+        <h2>Earlier Experience</h2>
+        <p class="earlier-intro">2014-2023: enterprise messaging, IoT, and startup product engineering.</p>
+
+        <div class="prior-roles">
+            <div class="prior-role">
+                <div class="prior-left">
+                    <div class="role-title">Senior Software Engineer II - Android</div>
+                    <div class="prior-company">Rakuten India</div>
+                    <div class="prior-date">2021 - 2023</div>
+                </div>
+                <ul>
+                    <li>Scaled Rakuten LINK consumer and enterprise apps: chat, messaging, offline sync, and database optimization.</li>
+                </ul>
+            </div>
+
+            <div class="prior-role">
+                <div class="prior-left">
+                    <div class="role-title">Senior Android Engineer</div>
+                    <div class="prior-company">WHIDE / Letstrack</div>
+                    <div class="prior-date">2019 - 2021</div>
+                </div>
+                <ul>
+                    <li>Built IoT tracking apps end-to-end: real-time location, background services, and offline-first architecture.</li>
+                </ul>
+            </div>
+
+            <div class="prior-role">
+                <div class="prior-left">
+                    <div class="role-title">Android Developer</div>
+                    <div class="prior-company">Praesidium, Softuvo, Bytenomi, TechiTechnologies</div>
+                    <div class="prior-date">2014 - 2019</div>
+                </div>
+                <ul>
+                    <li>Praesidium: owned service and payment apps from architecture through release.</li>
+                    <li>Startup roles: consumer apps, internal tools, and mobile fundamentals.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Selected Projects</h2>
+    <div class="prior-roles">
+        <div class="prior-role">
+            <div class="prior-left">
+                <div class="role-title">#Swaneet Wedding Platform</div>
+                <div class="prior-company">Next.js 15 / Neon / Rekognition</div>
+                <div class="prior-date"><a href="https://swaneet.vercel.app">Live</a> · <a href="https://github.com/HaneetGH/Swaneet-">GitHub</a></div>
+            </div>
+            <ul>
+                <li>Cinematic wedding site + PIN/RBAC admin: RSVP, stays, gallery moderation, multi-site feature flags; Neon + Vercel Blob + Resend.</li>
+                <li>AWS Rekognition face find (selfie match, cluster merge, magic-link albums); Framer Motion, GSAP, React Three Fiber.</li>
+            </ul>
+        </div>
+        <div class="prior-role">
+            <div class="prior-left">
+                <div class="role-title">BillSplit India</div>
+                <div class="prior-company">Turborepo / Firebase / Razorpay</div>
+                <div class="prior-date"><a href="https://github.com/HaneetGH/BillSplit">GitHub</a></div>
+            </div>
+            <ul>
+                <li>Fintech MVP: OCR + LLM receipt parsing, equal/item splits, secure claim links, UPI via Razorpay (no wallet float; paise integers).</li>
+                <li>Webhook HMAC settlement, admin feature flags/entitlements, Firestore rules; monorepo packages ready for React Native.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="footer-grid">
+        <div>
+            <h2>Technical Skills</h2>
+            <div class="skills-block">
+                <span class="skills-label">Android: </span>
+                <span class="skills-list">Kotlin, Java, Android SDK, Jetpack Compose, MVVM, Coroutines, Flow, Room, CameraX, WorkManager, RecyclerView, Performance Engineering, Module Architecture</span>
+            </div>
+            <div class="skills-block">
+                <span class="skills-label">Full-Stack: </span>
+                <span class="skills-list">TypeScript, Next.js, React, Tailwind, Zod, TanStack Query, Turborepo, Framer Motion/GSAP, Vercel, Neon Postgres, Vercel Blob</span>
+            </div>
+            <div class="skills-block">
+                <span class="skills-label">AI, Cloud &amp; Payments: </span>
+                <span class="skills-list">GenAI/LLM (Gemini/OpenAI), AWS Rekognition, OCR (Tesseract/Vision), Vector Search, on-device ML, GCP, Firebase, Razorpay/UPI, webhook HMAC, Presigned URLs, CDN</span>
+            </div>
+            <div class="skills-block">
+                <span class="skills-label">Leadership &amp; Quality: </span>
+                <span class="skills-list">E2E Ownership, Product Discovery, Stakeholder Management, Technical Design, RBAC/Feature Flags, Mentorship, GraphQL, Redis, Kafka, CI, GitHub Actions, Vitest/Playwright, Visual Regression, Accessibility (ADA)</span>
+            </div>
+        </div>
+        <div class="education-box">
+            <h2>Education</h2>
+            <p class="education-degree">B.Tech, Computer Science &amp; Engineering</p>
+            <p class="education-school">Punjab Technical University</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Haneet Singh Chhabra — Senior Android Engineer and technical lead owning mobile projects end-to-end, with backend and API integration experience at Walmart Global Tech."/>
+    <meta name="description" content="Haneet Singh Chhabra — Senior Android Engineer and E2E technical lead at Walmart Global Tech. Ships full-stack products with Next.js, AI pipelines, and payments (Swaneet, BillSplit)."/>
     <title>Haneet Singh Chhabra | Senior Android Engineer</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -323,6 +323,7 @@
             <a href="#collaboration">Product & Stakeholders</a>
             <a href="#experience-walmart">Android & Walmart</a>
             <a href="#e2e">E2E Leadership</a>
+            <a href="#projects">Projects</a>
             <a href="#experience-prior">Earlier Roles</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
@@ -333,12 +334,13 @@
             Android is my core — 10+ years building high-traffic mobile apps across startups and Big Tech.
             What sets me apart is owning the full lifecycle: discovery with PM, stakeholder alignment,
             technical design, hands-on Android development, and backend/API work when the feature demands it.
+            Recently shipped full-stack products with Next.js, serverless data, AI pipelines, and payments.
             Multiple-time Bravo Award recipient.
         </p>
         <div class="meta">
             <span>Bengaluru, India</span>
             <span>10+ Years · Android Specialist</span>
-            <span>Kotlin · Jetpack · GenAI · GCP · GraphQL</span>
+            <span>Kotlin · Jetpack · Next.js · GenAI · GCP · GraphQL</span>
             <span>
                 <a href="https://www.linkedin.com/in/haneetchhabra" target="_blank" rel="noopener">LinkedIn</a>
             </span>
@@ -487,6 +489,44 @@
         </div>
     </section>
 
+    <section id="projects">
+        <h3>Selected Projects</h3>
+
+        <div class="card">
+            <div class="role-header">
+                <h4>#Swaneet — Wedding Platform</h4>
+                <span>
+                    <a href="https://swaneet.vercel.app" target="_blank" rel="noopener">Live</a>
+                    ·
+                    <a href="https://github.com/HaneetGH/Swaneet-" target="_blank" rel="noopener">GitHub</a>
+                </span>
+            </div>
+            <p class="role-context">Next.js 15 · Neon Postgres · Vercel Blob · AWS Rekognition · Firebase · Resend</p>
+            <ul>
+                <li>Built a cinematic guest experience with Framer Motion, GSAP, Lenis, and React Three Fiber — invitation, countdown, story, events, venue map, gallery, and RSVP.</li>
+                <li>Shipped a PIN + RBAC admin dashboard for events, RSVPs, accommodation/room assignment, gallery moderation, team invites, and feature flags across main / mehfil / laavan sites.</li>
+                <li>Persisted ops data in Neon Postgres and media in Vercel Blob (direct uploads for large files on serverless); transactional email via Resend.</li>
+                <li>Integrated AWS Rekognition for “find my photos” — selfie match, face clusters, multi-merge, and magic-link private albums for guests.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="role-header">
+                <h4>BillSplit India</h4>
+                <span>
+                    <a href="https://github.com/HaneetGH/BillSplit" target="_blank" rel="noopener">GitHub</a>
+                </span>
+            </div>
+            <p class="role-context">Turborepo · Next.js 14 · Firebase · Razorpay / UPI · OCR + LLM · Zod</p>
+            <ul>
+                <li>Designed a fintech monorepo for receipt scanning, equal/item/custom splits, secure claim links, and UPI collection with Razorpay — no platform wallet (RBI PA/PG-aware).</li>
+                <li>Built a receipt OCR pipeline with Tesseract (default), optional Google Cloud Vision, and Gemini/OpenAI LLM parsing behind admin + per-user entitlements.</li>
+                <li>Implemented webhook-verified payments with HMAC idempotency, money as integer paise, live collection progress, and Firestore security rules/indexes.</li>
+                <li>Shipped admin ops: users, roles, feature flags, scan entitlements, transactions, and trends — shared packages structured for a future React Native client.</li>
+            </ul>
+        </div>
+    </section>
+
     <section id="experience-prior" class="prior-compact">
         <h3>Earlier Experience</h3>
 
@@ -541,8 +581,24 @@
                 <span class="pill">Module Architecture</span>
             </div>
             <div class="skills-group">
+                <h4>Full-Stack Web & Product</h4>
+                <span class="pill">TypeScript</span>
+                <span class="pill">Next.js (App Router)</span>
+                <span class="pill">React</span>
+                <span class="pill">Tailwind CSS</span>
+                <span class="pill">Zod</span>
+                <span class="pill">TanStack Query</span>
+                <span class="pill">Turborepo</span>
+                <span class="pill">Framer Motion / GSAP</span>
+                <span class="pill">React Three Fiber</span>
+                <span class="pill">Vercel</span>
+            </div>
+            <div class="skills-group">
                 <h4>AI & Modern Engineering</h4>
                 <span class="pill">GenAI / LLM Integration</span>
+                <span class="pill">Gemini / OpenAI</span>
+                <span class="pill">AWS Rekognition</span>
+                <span class="pill">OCR (Tesseract / Vision)</span>
                 <span class="pill">Vector Search</span>
                 <span class="pill">AI-Assisted Development</span>
                 <span class="pill">Cursor</span>
@@ -550,14 +606,24 @@
                 <span class="pill">ML Model Integration (on-device)</span>
             </div>
             <div class="skills-group">
-                <h4>Cloud, Media & Upload</h4>
+                <h4>Cloud, Data & Media</h4>
                 <span class="pill">Google Cloud Platform</span>
-                <span class="pill">Firebase</span>
+                <span class="pill">Firebase Auth / Firestore</span>
+                <span class="pill">Neon Postgres</span>
+                <span class="pill">Vercel Blob</span>
                 <span class="pill">Presigned URLs</span>
                 <span class="pill">Multipart Upload</span>
                 <span class="pill">Image & Video Upload</span>
                 <span class="pill">MP4 Metadata Extraction</span>
                 <span class="pill">CDN / Object Storage</span>
+            </div>
+            <div class="skills-group">
+                <h4>Payments & Fintech</h4>
+                <span class="pill">Razorpay</span>
+                <span class="pill">UPI Flows</span>
+                <span class="pill">Webhook HMAC / Idempotency</span>
+                <span class="pill">Money-as-Integer (paise)</span>
+                <span class="pill">Secure Tokenized Links</span>
             </div>
             <div class="skills-group">
                 <h4>Leadership & E2E Delivery</h4>
@@ -566,6 +632,7 @@
                 <span class="pill">Stakeholder Management</span>
                 <span class="pill">Technical Design</span>
                 <span class="pill">Cross-Team Leadership</span>
+                <span class="pill">RBAC / Feature Flags</span>
                 <span class="pill">Mentorship</span>
             </div>
             <div class="skills-group">
@@ -584,6 +651,7 @@
                 <span class="pill">A/B Experimentation</span>
                 <span class="pill">CI / Test Automation</span>
                 <span class="pill">GitHub Actions</span>
+                <span class="pill">Vitest / Playwright</span>
                 <span class="pill">Release Engineering</span>
                 <span class="pill">Visual Regression (pHash / ML)</span>
                 <span class="pill">Accessibility (ADA)</span>
