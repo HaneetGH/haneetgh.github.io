@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Haneet Singh Chhabra — Senior Android Engineer and E2E technical lead at Walmart Global Tech. Ships full-stack products with Next.js, AI pipelines, and payments (Swaneet, BillSplit)."/>
-    <title>Haneet Singh Chhabra | Senior Android Engineer</title>
+    <meta name="description" content="Haneet Singh Chhabra — Senior Software Engineer at Walmart Global Tech. Android specialist, data-pipeline engineer, and E2E technical lead. Ships mobile, full-stack, Spark/Airflow data pipelines, ML models, and AI products."/>
+    <title>Haneet Singh Chhabra | Senior Software Engineer</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -322,6 +322,7 @@
         <nav class="nav">
             <a href="#collaboration">Product & Stakeholders</a>
             <a href="#experience-walmart">Android & Walmart</a>
+            <a href="#data-engineering">Data Engineering & ML</a>
             <a href="#e2e">E2E Leadership</a>
             <a href="#projects">Projects</a>
             <a href="#experience-prior">Earlier Roles</a>
@@ -329,18 +330,20 @@
             <a href="#education">Education</a>
         </nav>
         <h1>Haneet Singh Chhabra</h1>
-        <p class="tagline">Senior Software Engineer (Android) · E2E Technical Lead</p>
+        <p class="tagline">Senior Software Engineer · Android · Data Engineering · E2E Technical Lead</p>
         <p class="lead">
             Android is my core — 10+ years building high-traffic mobile apps across startups and Big Tech.
             What sets me apart is owning the full lifecycle: discovery with PM, stakeholder alignment,
-            technical design, hands-on Android development, and backend/API work when the feature demands it.
+            technical design, hands-on Android development, and backend/API/data-pipeline work when the feature demands it.
+            Built large-scale Spark ETL &amp; ML pipelines processing millions of reviews, orchestrated 60+ Airflow DAGs on GCP,
+            and designed distributed microservices with saga-pattern rollback.
             Recently shipped full-stack products with Next.js, serverless data, AI pipelines, and payments.
             Multiple-time Bravo Award recipient.
         </p>
         <div class="meta">
             <span>Bengaluru, India</span>
-            <span>10+ Years · Android Specialist</span>
-            <span>Kotlin · Jetpack · Next.js · GenAI · GCP · GraphQL</span>
+            <span>10+ Years · Android + Data Engineering</span>
+            <span>Kotlin · Spark · Airflow · GCP · Next.js · GenAI · GraphQL</span>
             <span>
                 <a href="https://www.linkedin.com/in/haneetchhabra" target="_blank" rel="noopener">LinkedIn</a>
             </span>
@@ -363,6 +366,14 @@
         <div class="impact-item">
             <span class="num">5 teams</span>
             <span class="desc">Coordinated across for system design and delivery</span>
+        </div>
+        <div class="impact-item">
+            <span class="num">60+</span>
+            <span class="desc">Production Airflow DAGs orchestrating data pipelines on GCP</span>
+        </div>
+        <div class="impact-item">
+            <span class="num">ML</span>
+            <span class="desc">Spark MLlib models for automated content classification</span>
         </div>
     </div>
 
@@ -392,8 +403,8 @@
 
             <h4>Examples</h4>
             <ul>
-                <li><strong>Video reviews</strong> — self-initiated from discovery: partnered with PM on user stories, aligned vendor (BV) on API behavior, and scoped a 3-sprint Android delivery plan.</li>
-                <li><strong>Architecture decision</strong> — engaged five teams, documented seven options, and presented recommendation to senior leadership for product data on review pages.</li>
+                <li><strong>Video reviews</strong> — self-initiated from discovery through 3-sprint delivery plan; partnered with PM on user stories and aligned vendor (BV) on API behavior.</li>
+                <li><strong>UGC 2.0 architecture</strong> — evaluated 6+ enrichment approaches across 5+ platform teams; recommended IRO + LRU Cache and briefed senior leadership.</li>
                 <li><strong>Creator vs Reviewer Program</strong> — identified a product constraint no team owned; designed APIs and aligned both program teams on enforcement.</li>
                 <li><strong>Used & refurbished products</strong> — Android technical lead coordinating requirements and timelines across backend, web, and product.</li>
                 <li><strong>AI image search</strong> — partnered with data science and search teams from prototype scoping through Android delivery.</li>
@@ -411,16 +422,6 @@
             </div>
             <p class="role-context">Walmart Shopping App · Reviews & User-Generated Content</p>
 
-            <div class="highlight-box">
-                <span class="label">Product Alignment & Stakeholder Leadership</span>
-                <ul>
-                    <li><strong>PM & Product</strong> — lead epic discovery, requirements workshops, feasibility reviews, and sprint scoping for Android features (video reviews, camera upload, reviewer community).</li>
-                    <li><strong>Senior Leadership</strong> — briefed 8+ stakeholders on architecture tradeoffs, caching strategy, and reviews platform direction with documented analysis.</li>
-                    <li><strong>Cross-team alignment</strong> — coordinate Android, iOS, web, backend, data science, search, and vendor (Bazaarvoice) teams on scope, APIs, and rollout timelines.</li>
-                    <li><strong>Product decisions</strong> — identified Creator vs Reviewer Program mutual-exclusion gap; drove API design and alignment across both program teams.</li>
-                </ul>
-            </div>
-
             <h4>Android Performance & Architecture</h4>
             <ul>
                 <li>Owned reviews UI performance on the item detail page — render time <strong>380ms → 96ms</strong>, CPU <strong>−72%</strong>, dropped frames <strong>−73%</strong>, jank eliminated on one of Walmart's most-visited Android screens.</li>
@@ -433,7 +434,7 @@
             <ul>
                 <li>Camera upload and multi-image selection — presigned URL flows, image compression, and direct-to-cloud upload integration on Android.</li>
                 <li>Reviewer community and direct camera entry — owned from PM discovery through Android implementation and iOS/web alignment.</li>
-                <li>Self-initiated video reviews on Android — vendor API research, multipart upload design, metadata extraction, PoC, and sprint plan.</li>
+                <li><strong>Video upload pipeline</strong> — shipped streaming upload with 64KB chunked RequestBody, phase-based progress state machine (IDLE → UNDERSTANDING → UPLOADING → PROCESSING), and O(1) moov-atom metadata extraction in 20ms. BV integration with Passkey auth.</li>
                 <li>GenAI image search prototype — partnered with data science and search teams; vector similarity and on-device model integration on Android (&lt;2s latency).</li>
                 <li>Android technical lead for used/refurbished product experiences — coordinated delivery across backend, web, and product teams.</li>
             </ul>
@@ -442,15 +443,78 @@
             <ul>
                 <li>Contributed to GraphQL API orchestration for reviews platform rebuild — resolvers, seller reviews, product sampling, and catalog enrichment.</li>
                 <li>Built OpenAPI service clients and integration patterns adopted team-wide; designed Redis caching projected to cut peak backend load <strong>~85%</strong>.</li>
+                <li>Implemented <strong>memcache layer for IRO seller reviews</strong> — cut P95 latency <strong>~40%</strong> for online seller reviews API.</li>
+                <li>Led <strong>UGC 2.0 item enrichment architecture investigation</strong> — evaluated 6+ approaches (IQS, P13N, Preso/Search, Item Service, GraphQL Federation, IRO) across 5+ platform teams; recommended IRO + LRU Cache strategy.</li>
             </ul>
 
             <h4>Quality, Tooling & Leadership</h4>
             <ul>
-                <li>Built PixelMind (Android visual regression testing) and release sign-off SOP — both adopted as team standards.</li>
+                <li>Built <strong>PixelMind</strong> (DINOv2-based visual regression testing) and deployed to <strong>WCNP/Kubernetes</strong> — Docker image to Walmart container registry, Kubernetes seed Job to copy DINOv2 model weights from Azure Blob to PVC for air-gapped deployment. Adopted as team standard.</li>
+                <li>Built <strong>Automaton</strong> cron-based scheduled performance testing — Looper → curl → Automaton pipeline for unattended REST API perf runs; <strong>30–35% reduction</strong> in automation false failures via skip functionality.</li>
                 <li>Sustained <strong>48+ consecutive</strong> stable CI runs; led incident response when automation dropped to ~48%.</li>
                 <li>Designed A/B experiments with clear success metrics; mentor 2–3 Android engineers on performance and architecture.</li>
             </ul>
             <span class="award">Multiple-time Walmart Bravo Award · Zero accessibility defects</span>
+        </div>
+    </section>
+
+    <section id="data-engineering">
+        <h3>Data Engineering, ML & Backend Pipelines — Walmart UGC</h3>
+
+        <div class="card">
+            <div class="role-header">
+                <h4>Big Data & Content Moderation Pipelines</h4>
+                <span>Apache Spark · Hudi · Kafka · Cassandra · Elasticsearch</span>
+            </div>
+            <p class="role-context">UGC Pipeline Jobs — Large-scale ETL, NLP moderation, and ML classification for product reviews &amp; Q&A</p>
+
+            <h4>Spark ETL & Data Lake Architecture</h4>
+            <ul>
+                <li>Built multi-module <strong>Apache Spark 3.4</strong> pipeline system processing millions of product reviews and Q&A — ingestion, transformation, and loading into <strong>Apache Hudi</strong> data lake, Elasticsearch, and Cassandra.</li>
+                <li>Designed <strong>AbstractUGCJob</strong> base class centralizing Spark/Hudi configuration, Kafka producers, SFTP upload, and multi-store data loaders across 280+ classes.</li>
+                <li>Implemented <strong>AES-GCM encryption</strong>, PII filtering, and <strong>CCPA compliance</strong> workflows for customer data protection at scale.</li>
+            </ul>
+
+            <h4>NLP Content Moderation Engine</h4>
+            <ul>
+                <li>Built rule-engine-backed content moderation filters — <strong>profanity, spam, PII, fake review, foreign language, URL, and DBA detection</strong> — using Stanford CoreNLP, Apache Lucene, and DFA automata.</li>
+                <li>Designed pluggable filter architecture processing reviews through a moderation pipeline before publishing.</li>
+            </ul>
+
+            <h4>ML Model Training & Prediction</h4>
+            <ul>
+                <li>Developed <strong>Spark MLlib</strong> classification models (Logistic Regression, Naive Bayes) with cross-validation for automated review, question, and answer categorization.</li>
+                <li>Built prediction service applying trained models at runtime for content classification at scale.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="role-header">
+                <h4>Review Sampling Program — Distributed Microservices</h4>
+                <span>Spring · Cassandra · REST · Saga Pattern</span>
+            </div>
+            <p class="role-context">Customer enrollment lifecycle across Promo Engine, Customer Insights, and Creators Program</p>
+            <ul>
+                <li>Designed review sampling enrollment system orchestrating across <strong>Promo Engine</strong> and <strong>Customer Insights</strong> services with <strong>compensating-transaction (saga) rollback</strong> on partial failures.</li>
+                <li>Built <strong>Spring Data Cassandra</strong> repositories with composite partition keys for enrollment, history, and reminder tracking across tenants.</li>
+                <li>Implemented <strong>HMAC signature-based API authentication</strong>, feature-flag-driven branching, and Creators Program mutual-exclusion enforcement.</li>
+                <li>Managed full enrollment lifecycle: invite, accept, opt-out, disenroll, verified-purchase checks, and email/reddot reminder notifications.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="role-header">
+                <h4>Data Pipeline Orchestration — Airflow on GCP</h4>
+                <span>Apache Airflow · Dataproc · BigQuery · GCS · Docker</span>
+            </div>
+            <p class="role-context">60+ production DAGs for review syndication, purchase history, email notifications, and operational reporting</p>
+            <ul>
+                <li>Orchestrated <strong>60+ production Airflow DAGs</strong> on Astronomer runtime — Spark jobs via <strong>GCP Dataproc</strong>, analytical queries in <strong>BigQuery</strong>, and object storage on <strong>GCS</strong>.</li>
+                <li>Built pipelines for <strong>Bazaarvoice review syndication</strong>, customer purchase history, Kafka data sync, Elasticsearch ingestion, and customer segmentation.</li>
+                <li>Implemented data-quality safeguards: <strong>freshness checks, staleness detection</strong>, staging tables, and EDW joins in templated BigQuery SQL.</li>
+                <li>Designed observability layer with <strong>Slack alerting</strong>, xMatters escalation, and AST-based DAG-id collision tests in pytest.</li>
+                <li>Managed CI/CD with <strong>Concord/Looper Pro</strong>, SonarQube, and Docker-based deployments.</li>
+            </ul>
         </div>
     </section>
 
@@ -469,22 +533,20 @@
 
             <h4>Discover & Align</h4>
             <ul>
-                <li>Partner with PM on Android feature discovery, epic scoping, feasibility, and sprint planning.</li>
-                <li>Coordinate across Android, iOS, web, backend, data science, and vendor teams on scope and timelines.</li>
-                <li>Identified Creator Program vs Recognized Reviewer mutual-exclusion gap; designed APIs and cross-team data flow.</li>
+                <li>Self-initiate feature investigations (video reviews, UGC 2.0 enrichment) — from vendor API research through sprint delivery plans.</li>
+                <li>Drive architecture decisions across organizational boundaries — recently evaluated 6+ enrichment approaches spanning 5+ platform teams.</li>
             </ul>
 
             <h4>Design & Influence</h4>
             <ul>
-                <li>Own Android technical design — module architecture, performance strategy, feature flags, and cross-platform alignment.</li>
-                <li>Evaluated seven approaches across five teams for product data on review pages; briefed <strong>8+ senior stakeholders</strong> and drove the adopted path.</li>
-                <li>Proactively surfaced cross-team API migration blocker before downstream Android teams were impacted.</li>
+                <li>Own technical design end-to-end — module architecture, performance budgets, caching strategy, and cross-platform API contracts.</li>
+                <li>Proactively surface blockers before downstream teams are impacted — caught API migration dependency before it reached production.</li>
             </ul>
 
             <h4>Ship & Grow the Team</h4>
             <ul>
-                <li>Shipped production Android features with zero accessibility defects across multiple releases.</li>
-                <li>Mentor 2–3 engineers on Android performance, architecture, and test automation; delegate design reviews across workstreams.</li>
+                <li>Deliver across the stack when features demand it — Android, backend services, data pipelines, and infrastructure (PixelMind on WCNP/K8s).</li>
+                <li>Mentor 2–3 engineers; delegate design reviews; build tooling (Automaton, PixelMind) that scales team capability beyond individual output.</li>
             </ul>
         </div>
     </section>
@@ -579,6 +641,9 @@
                 <span class="pill">ViewStub / RecyclerView</span>
                 <span class="pill">Performance Engineering</span>
                 <span class="pill">Module Architecture</span>
+                <span class="pill">MediaMetadataRetriever</span>
+                <span class="pill">Streaming Upload (chunked)</span>
+                <span class="pill">Video Processing</span>
             </div>
             <div class="skills-group">
                 <h4>Full-Stack Web & Product</h4>
@@ -594,28 +659,52 @@
                 <span class="pill">Vercel</span>
             </div>
             <div class="skills-group">
-                <h4>AI & Modern Engineering</h4>
+                <h4>Big Data & Data Engineering</h4>
+                <span class="pill">Apache Spark (Core / SQL / Streaming / MLlib)</span>
+                <span class="pill">Apache Hudi</span>
+                <span class="pill">Apache Airflow / Astronomer</span>
+                <span class="pill">Apache Kafka</span>
+                <span class="pill">GCP Dataproc</span>
+                <span class="pill">BigQuery</span>
+                <span class="pill">HDFS / Hadoop</span>
+                <span class="pill">Hive</span>
+                <span class="pill">Trino</span>
+                <span class="pill">ETL Pipeline Design</span>
+                <span class="pill">Data Lake Architecture</span>
+                <span class="pill">DAG Orchestration</span>
+            </div>
+            <div class="skills-group">
+                <h4>AI, ML & NLP</h4>
+                <span class="pill">Spark MLlib</span>
+                <span class="pill">Stanford CoreNLP</span>
+                <span class="pill">Apache Lucene</span>
+                <span class="pill">NLP Content Moderation</span>
                 <span class="pill">GenAI / LLM Integration</span>
                 <span class="pill">Gemini / OpenAI</span>
                 <span class="pill">AWS Rekognition</span>
                 <span class="pill">OCR (Tesseract / Vision)</span>
                 <span class="pill">Vector Search</span>
-                <span class="pill">AI-Assisted Development</span>
-                <span class="pill">Cursor</span>
-                <span class="pill">Prompt Engineering</span>
+                <span class="pill">DINOv2 / Vision Transformers</span>
                 <span class="pill">ML Model Integration (on-device)</span>
+                <span class="pill">Prompt Engineering</span>
+                <span class="pill">AI-Assisted Development</span>
             </div>
             <div class="skills-group">
-                <h4>Cloud, Data & Media</h4>
+                <h4>Cloud, Data Stores & Media</h4>
                 <span class="pill">Google Cloud Platform</span>
+                <span class="pill">GCS / Object Storage</span>
+                <span class="pill">Cassandra</span>
+                <span class="pill">Elasticsearch</span>
+                <span class="pill">Memcache</span>
+                <span class="pill">Azure Blob Storage</span>
                 <span class="pill">Firebase Auth / Firestore</span>
                 <span class="pill">Neon Postgres</span>
+                <span class="pill">Redis</span>
                 <span class="pill">Vercel Blob</span>
                 <span class="pill">Presigned URLs</span>
                 <span class="pill">Multipart Upload</span>
                 <span class="pill">Image & Video Upload</span>
-                <span class="pill">MP4 Metadata Extraction</span>
-                <span class="pill">CDN / Object Storage</span>
+                <span class="pill">CDN</span>
             </div>
             <div class="skills-group">
                 <h4>Payments & Fintech</h4>
@@ -637,23 +726,36 @@
             </div>
             <div class="skills-group">
                 <h4>Backend & APIs</h4>
+                <span class="pill">Spring Framework / Spring Data</span>
                 <span class="pill">GraphQL</span>
                 <span class="pill">Node.js</span>
                 <span class="pill">REST / OpenAPI</span>
-                <span class="pill">Redis / Caching</span>
-                <span class="pill">Kafka</span>
                 <span class="pill">Java 21 Concurrency</span>
-                <span class="pill">Feature Flags / Remote Config</span>
+                <span class="pill">Python</span>
+                <span class="pill">Maven</span>
+                <span class="pill">Saga / Compensating Transactions</span>
+                <span class="pill">HMAC / Signature Auth</span>
                 <span class="pill">System Design</span>
+            </div>
+            <div class="skills-group">
+                <h4>Security & Compliance</h4>
+                <span class="pill">AES-GCM Encryption</span>
+                <span class="pill">PII Filtering</span>
+                <span class="pill">CCPA Compliance</span>
             </div>
             <div class="skills-group">
                 <h4>Quality, DevOps & Tools</h4>
                 <span class="pill">A/B Experimentation</span>
                 <span class="pill">CI / Test Automation</span>
+                <span class="pill">Concord / Looper CI/CD</span>
+                <span class="pill">Docker</span>
+                <span class="pill">Kubernetes / WCNP</span>
                 <span class="pill">GitHub Actions</span>
+                <span class="pill">SonarQube</span>
+                <span class="pill">Performance Test Automation</span>
                 <span class="pill">Vitest / Playwright</span>
                 <span class="pill">Release Engineering</span>
-                <span class="pill">Visual Regression (pHash / ML)</span>
+                <span class="pill">Visual Regression (DINOv2 / pHash)</span>
                 <span class="pill">Accessibility (ADA)</span>
                 <span class="pill">Analytics Instrumentation</span>
             </div>
