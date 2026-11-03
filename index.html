@@ -8,6 +8,19 @@
     <meta property="og:title" content="Haneet Singh Chhabra | Senior Software Engineer & Product Builder"/>
     <meta property="og:description" content="Engineering leadership across Android, platform architecture, data systems and independent products." />
     <meta property="og:url" content="https://haneetgh.github.io/"/>
+    <link rel="canonical" href="https://haneetgh.github.io/"/>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Haneet Singh Chhabra",
+      "url": "https://haneetgh.github.io/",
+      "jobTitle": "Senior Software Engineer",
+      "worksFor": {"@type": "Organization", "name": "Walmart Global Tech"},
+      "sameAs": ["https://www.linkedin.com/in/haneetchhabra", "https://github.com/HaneetGH"],
+      "knowsAbout": ["Android", "Kotlin", "Java", "GraphQL", "Platform Engineering", "Apache Spark", "Apache Kafka", "Next.js", "SaaS Product Development"]
+    }
+    </script>
     <meta name="description" content="Haneet Singh Chhabra — Senior Software Engineer at Walmart Global Tech. Android, Kotlin, GraphQL, Java services, and GCP data pipelines. Independent product builder of Gatheroly, a multi-tenant event SaaS platform."/>
     <title>Haneet Singh Chhabra | Senior Software Engineer</title>
 
@@ -352,6 +365,8 @@
             var(--bg);
           line-height: 1.72;
         }
+        .skip-link { position:absolute; left:-9999px; top:10px; z-index:99; padding:10px 14px; color:#061522; background:var(--accent); border-radius:8px; font-weight:700; }
+        .skip-link:focus { left:12px; }
         .container { max-width: 1160px; padding: 28px 32px 96px; }
         .nav {
           margin: -28px -32px 52px; padding: 16px 32px;
@@ -462,7 +477,8 @@
 </head>
 
 <body>
-<div class="container">
+<a class="skip-link" href="#main-content">Skip to content</a>
+<div class="container" id="main-content">
 
         <nav class="nav" aria-label="Main navigation">
             <a href="#featured-work">Selected Work</a>
@@ -570,10 +586,10 @@
                         <p>WHIDE's published product model includes trusted drivers, scheduled rides, driver-partner onboarding, delivery tasks, live trip visibility and customer safety features. My work included Android experiences on both customer and partner sides.</p>
                         <h5>Letstrack — connected tracking</h5>
                         <div class="flow-diagram"><span class="flow-node">Phone / GPS device</span><span class="flow-arrow">→</span><span class="flow-node">Tracking platform</span><span class="flow-arrow">→</span><span class="flow-node">Mobile / Web</span><span class="flow-arrow">→</span><span class="flow-node">Voice assistant</span></div>
-                        <p>Worked on the Android application experience around location sharing, tracking and communication, plus the Letstrack AI Google Home chatbot integration.</p>
+                        <p>Worked on the Android application experience around location sharing, tracking and communication, plus the Letstrack AI Google Home chatbot integration. Public product references describe real-time tracking, geofencing, alerts and connected-device experiences; these describe the product domain, not individual claims about my implementation.</p>
                     </div>
                 </details>
-                <p><a class="text-link" href="#experience-prior">Read earlier experience ↓</a></p>
+                <p><a class="text-link" href="#experience-prior">Read earlier experience ↓</a> &nbsp;·&nbsp; <a class="text-link" href="https://www.whide.com/faq" target="_blank" rel="noopener">WHIDE product details ↗</a> &nbsp;·&nbsp; <a class="text-link" href="https://www.letstrack.in/" target="_blank" rel="noopener">Letstrack ↗</a></p>
             </article>
         </div>
     </section>
@@ -729,7 +745,7 @@
             <p class="role-context">Mobility · Last-Mile Delivery · GPS / IoT Tracking · Android Applications</p>
 
             <h4>WHIDE Customer — Trusted Mobility &amp; On-Demand Services</h4>
-            <p>WHIDE's customer app was built around a trusted-driver model: customers could choose known or preferred drivers and book rides around a convenient time and pickup location.</p>
+            <p>WHIDE described itself as a tech-driven last-mile platform built around trusted customer-driver relationships. Its customer app supported rides, scheduled bookings and on-demand tasks, while the partner app handled driver onboarding and service fulfilment.</p>
             <ul>
                 <li><strong>Trusted-driver booking</strong> — developed the customer-side Android experience for discovering/choosing trusted drivers and arranging rides.</li>
                 <li><strong>Multi-service journeys</strong> — supported the broader WHIDE service proposition spanning rides, self-drive options and on-demand tasks such as parcel, food and shopping delivery.</li>
