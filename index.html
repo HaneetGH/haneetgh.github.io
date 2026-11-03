@@ -319,16 +319,14 @@
 <div class="container">
 
     <header>
-        <nav class="nav">
-            <a href="#collaboration">Product & Stakeholders</a>
-            <a href="#experience-walmart">Walmart / UGC</a>
-            <a href="#e2e">E2E Leadership</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience-prior">Earlier Roles</a>
+        <nav class="nav" aria-label="Main navigation">
+            <a href="#experience">Experience</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#personal-projects">Personal Projects</a>
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
-        </nav>
-        <h1>Haneet Singh Chhabra</h1>
+            <a href="cv/Haneet_Singh_Chhabra_CV.html" target="_blank" rel="noopener">Resume ↗</a>
+        </nav>        <h1>Haneet Singh Chhabra</h1>
         <p class="tagline">Senior Software Engineer · Android, Platform &amp; Data</p>
         <p class="lead">
             10+ years shipping high-traffic products — Android at the core, with GraphQL orchestration,
@@ -351,61 +349,7 @@
         </div>
     </header>
 
-    <div class="impact-row">
-        <div class="impact-item">
-            <span class="num">~75%</span>
-            <span class="desc">Faster Reviews UI on highest-traffic product pages</span>
-        </div>
-        <div class="impact-item">
-            <span class="num">3.3M</span>
-            <span class="desc">Requests/min validated; p95 ~49 ms under stress</span>
-        </div>
-        <div class="impact-item">
-            <span class="num">~40%</span>
-            <span class="desc">Lower seller-reviews p95 via distributed item cache</span>
-        </div>
-        <div class="impact-item">
-            <span class="num">11</span>
-            <span class="desc">Surfaces under dual read/write migration + feature flags</span>
-        </div>
-    </div>
-
-    <section id="collaboration">
-        <h3>Product & Stakeholder Alignment</h3>
-        <div class="card">
-            <p>I work with product and leadership through the full lifecycle — discovery, design, delivery, and production risk — not only during implementation.</p>
-
-            <div class="collab-grid">
-                <div class="collab-item">
-                    <strong>Product & PM</strong>
-                    <span>Epic discovery, requirements, feasibility, sprint scoping, and A/B experiment design with clear success metrics.</span>
-                </div>
-                <div class="collab-item">
-                    <strong>Senior Leadership</strong>
-                    <span>Architecture option analyses, caching strategy, and platform migration briefs with written recommendations.</span>
-                </div>
-                <div class="collab-item">
-                    <strong>Cross-Platform Teams</strong>
-                    <span>Aligned Android, iOS, and web on video reviews, multi-image selection, and camera flows for a consistent customer experience.</span>
-                </div>
-                <div class="collab-item">
-                    <strong>Platform & Partner Teams</strong>
-                    <span>Coordinated item data, search, presentation, GraphQL federation, data science, and third-party vendor (Bazaarvoice) teams on APIs and rollout.</span>
-                </div>
-            </div>
-
-            <h4>Examples</h4>
-            <ul>
-                <li><strong>UGC 2.0 dual read/write</strong> — designed parallel write/read architecture, caught a vendor double-submission blocker before launch, and drove A/B rollout across 11 surfaces.</li>
-                <li><strong>Video reviews</strong> — self-initiated from research through production: vendor API deep-dive, progressive upload choice, Android streaming upload, and cross-platform alignment.</li>
-                <li><strong>Item enrichment architecture</strong> — led investigation with 5+ platform teams; recommended cached item-service path and shipped the OpenAPI/GraphQL foundation.</li>
-                <li><strong>Sampling re-engagement</strong> — designed and built Spark/Airflow/Kafka reminder pipelines targeting ~33K invitees who never enrolled (87% of invitees).</li>
-                <li><strong>AI image search</strong> — partnered with data science and search from prototype scoping through mobile delivery planning.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="experience-walmart">
+<section id="experience">
         <h3>Walmart Global Tech — User-Generated Content</h3>
 
         <div class="card">
@@ -454,8 +398,43 @@
         </div>
     </section>
 
-    <section id="e2e">
-        <h3>Beyond Code — E2E Leadership</h3>
+<section id="leadership">
+        <h3>Product & Stakeholder Leadership at Walmart</h3>
+        <div class="card">
+            <p>I work with product and leadership through the full lifecycle — discovery, design, delivery, and production risk — not only during implementation.</p>
+
+            <div class="collab-grid">
+                <div class="collab-item">
+                    <strong>Product & PM</strong>
+                    <span>Epic discovery, requirements, feasibility, sprint scoping, and A/B experiment design with clear success metrics.</span>
+                </div>
+                <div class="collab-item">
+                    <strong>Senior Leadership</strong>
+                    <span>Architecture option analyses, caching strategy, and platform migration briefs with written recommendations.</span>
+                </div>
+                <div class="collab-item">
+                    <strong>Cross-Platform Teams</strong>
+                    <span>Aligned Android, iOS, and web on video reviews, multi-image selection, and camera flows for a consistent customer experience.</span>
+                </div>
+                <div class="collab-item">
+                    <strong>Platform & Partner Teams</strong>
+                    <span>Coordinated item data, search, presentation, GraphQL federation, data science, and third-party vendor (Bazaarvoice) teams on APIs and rollout.</span>
+                </div>
+            </div>
+
+            <h4>Examples</h4>
+            <ul>
+                <li><strong>UGC 2.0 dual read/write</strong> — designed parallel write/read architecture, caught a vendor double-submission blocker before launch, and drove A/B rollout across 11 surfaces.</li>
+                <li><strong>Video reviews</strong> — self-initiated from research through production: vendor API deep-dive, progressive upload choice, Android streaming upload, and cross-platform alignment.</li>
+                <li><strong>Item enrichment architecture</strong> — led investigation with 5+ platform teams; recommended cached item-service path and shipped the OpenAPI/GraphQL foundation.</li>
+                <li><strong>Sampling re-engagement</strong> — designed and built Spark/Airflow/Kafka reminder pipelines targeting ~33K invitees who never enrolled (87% of invitees).</li>
+                <li><strong>AI image search</strong> — partnered with data science and search from prototype scoping through mobile delivery planning.</li>
+            </ul>
+        </div>
+    </section>
+
+<section id="e2e">
+        <h3>End-to-End Ownership at Walmart</h3>
         <div class="card">
             <div class="e2e-flow">
                 <div class="e2e-step">Discover</div>
@@ -487,8 +466,62 @@
         </div>
     </section>
 
-    <section id="projects">
-        <h3>Independent Projects &amp; Engineering Work</h3>
+<section id="experience-prior" class="prior-compact">
+        <h3>Earlier Experience</h3>
+
+        <div class="card">
+            <div class="role-header">
+                <h4>Senior Software Engineer II — Android</h4>
+                <span>Rakuten India · 2021 – 2023</span>
+            </div>
+            <ul>
+                <li>Scaled Android features for Rakuten LINK consumer and enterprise apps — chat, messaging, offline sync, and database optimization.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="role-header">
+                <h4>Senior Android Engineer</h4>
+                <span>WHIDE / Letstrack · 2019 – 2021</span>
+            </div>
+            <ul>
+                <li>Built IoT tracking apps end-to-end — real-time location, background services, and offline-first architecture.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <div class="role-header">
+                <h4>Android Developer</h4>
+                <span>2014 – 2019</span>
+            </div>
+            <ul>
+                <li>Praesidium IT Solutions — owned service and payment apps from architecture through release.</li>
+                <li>Softuvo Solutions, Bytenomi Technologies, TechiTechnologies — consumer apps and internal tools.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="impact-row">
+        <div class="impact-item">
+            <span class="num">~75%</span>
+            <span class="desc">Faster Reviews UI on highest-traffic product pages</span>
+        </div>
+        <div class="impact-item">
+            <span class="num">3.3M</span>
+            <span class="desc">Requests/min validated; p95 ~49 ms under stress</span>
+        </div>
+        <div class="impact-item">
+            <span class="num">~40%</span>
+            <span class="desc">Lower seller-reviews p95 via distributed item cache</span>
+        </div>
+        <div class="impact-item">
+            <span class="num">11</span>
+            <span class="desc">Surfaces under dual read/write migration + feature flags</span>
+        </div>
+    </div>
+
+<section id="personal-projects">
+        <h3>Personal Projects</h3>
 
         <div class="card">
             <div class="role-header">
@@ -585,42 +618,7 @@
         </div>
     </section>
 
-    <section id="experience-prior" class="prior-compact">
-        <h3>Earlier Experience</h3>
-
-        <div class="card">
-            <div class="role-header">
-                <h4>Senior Software Engineer II — Android</h4>
-                <span>Rakuten India · 2021 – 2023</span>
-            </div>
-            <ul>
-                <li>Scaled Android features for Rakuten LINK consumer and enterprise apps — chat, messaging, offline sync, and database optimization.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <div class="role-header">
-                <h4>Senior Android Engineer</h4>
-                <span>WHIDE / Letstrack · 2019 – 2021</span>
-            </div>
-            <ul>
-                <li>Built IoT tracking apps end-to-end — real-time location, background services, and offline-first architecture.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <div class="role-header">
-                <h4>Android Developer</h4>
-                <span>2014 – 2019</span>
-            </div>
-            <ul>
-                <li>Praesidium IT Solutions — owned service and payment apps from architecture through release.</li>
-                <li>Softuvo Solutions, Bytenomi Technologies, TechiTechnologies — consumer apps and internal tools.</li>
-            </ul>
-        </div>
-    </section>
-
-    <section id="skills">
+<section id="skills">
         <h3>Skills</h3>
         <div class="card">
             <div class="skills-group">
@@ -706,7 +704,7 @@
         </div>
     </section>
 
-    <section id="education">
+<section id="education">
         <h3>Education</h3>
         <div class="card">
             <strong>B.Tech — Computer Science & Engineering</strong><br/>
