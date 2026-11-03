@@ -40,16 +40,28 @@
         }
 
         .nav {
+          position: sticky;
+          top: 0;
+          z-index: 20;
           display: flex;
-          flex-wrap: wrap;
-          gap: 14px 20px;
-          margin-bottom: 28px;
+          flex-wrap: nowrap;
+          gap: 8px 22px;
+          margin: -48px -24px 34px;
+          padding: 15px 24px;
+          overflow-x: auto;
+          white-space: nowrap;
+          background: rgba(11, 18, 32, 0.94);
+          border-bottom: 1px solid var(--border);
+          backdrop-filter: blur(14px);
+          -webkit-backdrop-filter: blur(14px);
           font-size: 13px;
-          font-weight: 500;
+          font-weight: 600;
         }
 
-        .nav a { color: var(--muted); }
+        .nav a { color: var(--muted); flex: 0 0 auto; }
         .nav a:hover { color: var(--accent); text-decoration: none; }
+
+        section[id] { scroll-margin-top: 76px; }
 
         header { margin-bottom: 40px; }
 
@@ -310,6 +322,8 @@
         }
 
         @media (max-width: 600px) {
+          .container { padding-top: 48px; }
+          .nav { margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; }
           .card { padding: 20px; }
         }
     </style>
@@ -318,7 +332,6 @@
 <body>
 <div class="container">
 
-    <header>
         <nav class="nav" aria-label="Main navigation">
             <a href="#experience">Experience</a>
             <a href="#leadership">Leadership</a>
@@ -326,7 +339,10 @@
             <a href="#skills">Skills</a>
             <a href="#education">Education</a>
             <a href="cv/Haneet_Singh_Chhabra_CV.html" target="_blank" rel="noopener">Resume ↗</a>
-        </nav>        <h1>Haneet Singh Chhabra</h1>
+        </nav>
+
+    <header>
+        <h1>Haneet Singh Chhabra</h1>
         <p class="tagline">Senior Software Engineer · Android, Platform &amp; Data</p>
         <p class="lead">
             10+ years shipping high-traffic products — Android at the core, with GraphQL orchestration,
