@@ -1,402 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Haneet Singh Chhabra - Resume</title>
-    <style>
-        @page {
-            size: letter;
-            margin: 0.42in 0.5in;
-        }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
-        body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 9.5pt;
-            line-height: 1.35;
-            color: #1a1a1a;
-            background: #fff;
-            max-width: 7.5in;
-            margin: 0 auto;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
-        }
-
-        header {
-            border-bottom: 2px solid #0f4c81;
-            padding-bottom: 6px;
-            margin-bottom: 7px;
-        }
-
-        h1 {
-            font-size: 20pt;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: #0f172a;
-            line-height: 1.08;
-        }
-
-        .headline {
-            font-size: 10.5pt;
-            font-weight: 600;
-            color: #0f4c81;
-            margin-top: 2px;
-        }
-
-        .contact {
-            margin-top: 4px;
-            font-size: 8.5pt;
-            color: #374151;
-            line-height: 1.4;
-        }
-
-        .contact a {
-            color: #0f4c81;
-            text-decoration: none;
-        }
-
-        section { margin-bottom: 7px; }
-
-        h2 {
-            font-size: 9.5pt;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #0f4c81;
-            border-bottom: 1px solid #d1d5db;
-            padding-bottom: 2px;
-            margin-bottom: 4px;
-        }
-
-        .summary { color: #374151; font-size: 9.25pt; }
-
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 4px;
-        }
-
-        .metric {
-            background: #f8fafc;
-            border: 1px solid #e5e7eb;
-            border-radius: 3px;
-            padding: 4px 5px;
-            text-align: center;
-        }
-
-        .metric strong {
-            display: block;
-            font-size: 10pt;
-            color: #0f4c81;
-            line-height: 1.15;
-        }
-
-        .metric span {
-            display: block;
-            font-size: 7pt;
-            color: #4b5563;
-            margin-top: 1px;
-            line-height: 1.25;
-        }
-
-        .current-role {
-            background: #f8fafc;
-            border: 1px solid #dbeafe;
-            border-left: 4px solid #0f4c81;
-            border-radius: 0 6px 6px 0;
-            padding: 7px 10px 6px;
-        }
-
-        .role-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 10px;
-            page-break-after: avoid;
-        }
-
-        .role-title {
-            font-size: 10pt;
-            font-weight: 700;
-            color: #0f172a;
-        }
-
-        .role-date {
-            font-size: 8.5pt;
-            font-weight: 600;
-            color: #0f4c81;
-            white-space: nowrap;
-        }
-
-        .role-meta {
-            font-size: 8.5pt;
-            color: #4b5563;
-            margin: 1px 0 5px;
-        }
-
-        .role-meta strong { color: #1f2937; }
-
-        .subheading {
-            font-size: 8.25pt;
-            font-weight: 700;
-            color: #0f4c81;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            margin: 5px 0 2px;
-            page-break-after: avoid;
-        }
-
-        .subheading:first-of-type { margin-top: 0; }
-
-        ul { padding-left: 13px; margin: 0; }
-        li { margin-bottom: 1.5px; color: #374151; }
-        li strong { color: #111827; }
-
-        .award {
-            font-size: 8.25pt;
-            font-weight: 600;
-            color: #0f4c81;
-            margin-top: 4px;
-            padding-top: 3px;
-            border-top: 1px dashed #cbd5e1;
-        }
-
-        .earlier-section {
-            margin-top: 8px;
-            padding-top: 6px;
-            border-top: 2px solid #64748b;
-        }
-
-        .earlier-intro {
-            font-size: 8pt;
-            color: #4b5563;
-            margin: 0 0 4px;
-        }
-
-        .prior-roles { display: flex; flex-direction: column; gap: 4px; }
-
-        .prior-role {
-            display: grid;
-            grid-template-columns: 1.35in 1fr;
-            gap: 3px 8px;
-            align-items: start;
-            border: 1px solid #e5e7eb;
-            border-left: 3px solid #64748b;
-            border-radius: 0 4px 4px 0;
-            padding: 5px 8px;
-            background: #fafafa;
-            page-break-inside: avoid;
-        }
-
-        .prior-left .role-title {
-            font-size: 9pt;
-            font-weight: 700;
-            color: #111827;
-            line-height: 1.25;
-        }
-
-        .prior-company {
-            font-size: 8pt;
-            font-weight: 600;
-            color: #0f4c81;
-            margin-top: 1px;
-        }
-
-        .prior-date {
-            font-size: 7.75pt;
-            color: #6b7280;
-            margin-top: 1px;
-        }
-
-        .prior-role li {
-            font-size: 8.75pt;
-            margin-bottom: 1px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.55in;
-            gap: 12px;
-            align-items: start;
-            page-break-inside: avoid;
-        }
-
-        .skills-block { margin-bottom: 2px; }
-        .skills-block:last-child { margin-bottom: 0; }
-
-        .skills-label {
-            font-size: 8pt;
-            font-weight: 700;
-            color: #1f2937;
-        }
-
-        .skills-list {
-            font-size: 8pt;
-            color: #374151;
-        }
-
-        .education-box {
-            border: 1px solid #e5e7eb;
-            border-radius: 4px;
-            padding: 7px 9px;
-            background: #f8fafc;
-        }
-
-        .education-box h2 {
-            margin-bottom: 3px;
-            font-size: 8.5pt;
-        }
-
-        .education-degree {
-            font-size: 8.5pt;
-            font-weight: 700;
-            color: #111827;
-        }
-
-        .education-school {
-            color: #374151;
-            font-size: 8.25pt;
-            margin-top: 2px;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Haneet Singh Chhabra | Resume</title>
+<style>
+@page{size:A4;margin:11mm 14mm 13mm}
+*{box-sizing:border-box}body{font:8.2pt/1.28 Arial,Helvetica,sans-serif;color:#18212b;margin:0;background:#fff}
+main{max-width:190mm;margin:auto}header{border-bottom:2px solid #123b5d;padding:0 0 5px;margin-bottom:6px}
+h1{font-size:21pt;line-height:1.05;color:#123b5d;margin:0 0 3px;letter-spacing:-.4px}
+.headline{font-size:9pt;font-weight:bold;color:#176b87;margin:0 0 3px}
+.contact{font-size:7.5pt;color:#526171;margin:0 0 2px}
+a{color:#176b87;text-decoration:none}
+section{margin:5px 0 0}
+h2{font-size:8.8pt;letter-spacing:.6px;text-transform:uppercase;color:#123b5d;border-bottom:1px solid #d7e0e7;padding-bottom:2px;margin:0 0 4px}
+p{margin:0 0 3px}.summary{font-size:8pt;line-height:1.3}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin:4px 0}
+.metric{background:#f2f6f9;border:1px solid #d7e0e7;text-align:center;padding:4px}
+.metric b{display:block;font-size:11pt;color:#123b5d}.metric span{font-size:6.5pt;color:#526171}
+.role{margin:0 0 5px;break-inside:avoid}.rolehead{display:flex;justify-content:space-between;gap:8px}
+.rolehead strong{font-size:8.6pt}.date{font-size:7.4pt;font-weight:bold;color:#176b87;white-space:nowrap}
+.meta{font-size:7.3pt;color:#526171;margin:1px 0 2px}
+ul{margin:2px 0 0;padding-left:13px}li{margin:0 0 1.3px;font-size:7.55pt;line-height:1.22}
+.page2{break-before:page;page-break-before:always}
+.project{margin:0 0 5px;break-inside:avoid}.project strong{color:#123b5d;font-size:8.3pt}
+.skills p{font-size:7.4pt;margin:0 0 2px}
+@media screen{body{background:#e9eef2;padding:18px}main{background:white;max-width:210mm;padding:14mm;box-shadow:0 2px 14px #0002}.page2{margin-top:14mm;border-top:1px dashed #9aa9b5;padding-top:8mm}}
+@media print{main{max-width:none}.page2{margin:0;border:0;padding:0}}
+</style>
 </head>
-<body>
-
+<body><main>
 <header>
-    <h1>Haneet Singh Chhabra</h1>
-    <p class="headline">Senior Software Engineer | Android, Platform &amp; Data</p>
-    <p class="contact">
-        Bengaluru, India &nbsp;|&nbsp;
-        <a href="mailto:haneetatwork@gmail.com">haneetatwork@gmail.com</a> &nbsp;|&nbsp;
-        <a href="https://www.linkedin.com/in/haneetchhabra">linkedin.com/in/haneetchhabra</a> &nbsp;|&nbsp;
-        <a href="https://haneetgh.github.io">haneetgh.github.io</a>
-    </p>
-    <p class="contact">10+ Years &nbsp;|&nbsp; Kotlin &middot; Jetpack Compose &middot; GraphQL &middot; Spark/Kafka &middot; Next.js &middot; GenAI</p>
+<h1>Haneet Singh Chhabra</h1>
+<p class="headline">SENIOR SOFTWARE ENGINEER | ANDROID · PLATFORM ENGINEERING · PRODUCT BUILDER</p>
+<p class="contact">Bengaluru, India · <a href="mailto:haneetatwork@gmail.com">haneetatwork@gmail.com</a> · <a href="https://www.linkedin.com/in/haneetchhabra">linkedin.com/in/haneetchhabra</a> · <a href="https://haneetgh.github.io">haneetgh.github.io</a></p>
 </header>
-
-<section>
-    <h2>Professional Summary</h2>
-    <p class="summary">
-        Senior Software Engineer at Walmart Global Tech building the UGC (reviews, ratings, media) platform.
-        Works across Android (Kotlin), GraphQL/Node.js, Java services, and GCP data pipelines (Spark, Kafka, Airflow, BigQuery, Cassandra).
-        Leads zero-downtime migrations, performance engineering, and AI-assisted tooling.
-        Independently building Gatheroly, a multi-tenant event SaaS platform. Multiple Bravo Awards.
-    </p>
+<section><h2>Professional Summary</h2>
+<p class="summary">Senior Software Engineer with 10+ years of experience building Android products and scalable platform systems. At Walmart Global Tech, leads engineering across user-generated content (reviews, ratings and media), mobile performance, GraphQL services and data pipelines. Strengths include architecture, zero-downtime migrations, production reliability and mentoring. Also builds independent products, including Gatheroly, and operates TechnoRapper, a technology publication founded in 2012.</p></section>
+<section><h2>Selected Impact</h2><div class="metrics">
+<div class="metric"><b>~75%</b><span>Faster Reviews UI on high-traffic pages</span></div>
+<div class="metric"><b>3.3M</b><span>Requests/min stress capacity; p95 ~49 ms</span></div>
+<div class="metric"><b>~40%</b><span>Lower seller-reviews p95 via item cache</span></div>
+<div class="metric"><b>11</b><span>Surfaces in dual read/write migration</span></div>
+</div></section>
+<section><h2>Professional Experience</h2>
+<div class="role"><div class="rolehead"><strong>Senior Software Engineer</strong><span class="date">Feb 2023 – Present</span></div><p class="meta"><b>Walmart Global Tech</b> · UGC Platform · Kotlin/Android · GraphQL · Java · Spark/Kafka · GCP</p><ul>
+<li>Led zero-downtime V1-to-V2 migration using dual read/write, feature flags, shadow traffic, parity logging and rollback controls across 11 surfaces; validated with 1,251 tests.</li>
+<li>Designed cache-aside item enrichment; reduced seller-reviews p95 latency by ~40%, with projected 80–95% fewer repeat downstream calls.</li>
+<li>Improved PDP Reviews rendering from ~40 ms to ~10 ms (~75% faster), with jank near zero; review caching delivered 1–1.6B API-call optimisations/day.</li>
+<li>Built OpenAPI clients and GraphQL resolvers for seller reviews, submission and sampling; partnered with 5+ platform teams on enrichment architecture.</li>
+<li>Led video-review engineering from vendor evaluation to production: progressive upload and Android media handling for uploads up to 200 MB.</li>
+<li>Owned stress/capacity testing to ~3.3M requests/min at ~49 ms p95; identified Node.js single-thread and downstream-call bottlenecks.</li>
+<li>Built sampling-reminder workflows with Spark/Dataproc, Airflow, Kafka, Cassandra and BigQuery; developed PixelMind visual regression tooling, reducing UI-automation false failures by ~30–35%.</li>
+<li>Contributed to on-call, production-risk reviews, release readiness and mentoring; received multiple Bravo Awards.</li></ul></div>
+<div class="role"><div class="rolehead"><strong>Senior Software Engineer II – Android</strong><span class="date">2021 – 2023</span></div><p class="meta"><b>Rakuten India</b> · Rakuten LINK · Enterprise Communication</p><ul>
+<li>Developed the LINK Chatbot / AI Assistant module within Rakuten LINK and contributed to Rakuten LINK Office.</li>
+<li>Built Android features using Kotlin/Java, MVVM, Room/SQLite and Android SDK across messaging and offline data workflows.</li></ul></div>
+<div class="role"><div class="rolehead"><strong>Senior SDE – Android</strong><span class="date">2019 – 2021</span></div><p class="meta"><b>WHIDE / Letstrack</b> · Mobility · GPS/IoT Tracking · Node.js</p><ul>
+<li>Built WHIDE Customer and Partner apps for trusted-driver bookings, rides, delivery, partner onboarding and service fulfilment.</li>
+<li>Contributed to Letstrack Mobile and LTRetail for GPS tracking, messaging, retailer sales and device/service activation.</li>
+<li>Prototyped a Letstrack Google Home Action using Node.js and Dialogflow for device information and supported vehicle actions.</li></ul></div>
 </section>
-
-<section>
-    <h2>Key Impact</h2>
-    <div class="metrics">
-        <div class="metric"><strong>~75%</strong><span>Faster Reviews UI on highest-traffic pages</span></div>
-        <div class="metric"><strong>3.3M</strong><span>Req/min stress capacity; p95 ~49 ms</span></div>
-        <div class="metric"><strong>~40%</strong><span>Lower seller-reviews p95 via item cache</span></div>
-        <div class="metric"><strong>11</strong><span>Surfaces under dual read/write + flags</span></div>
-    </div>
+<div class="page2">
+<section><h2>Earlier Experience</h2>
+<div class="role"><div class="rolehead"><strong>Senior Android Developer · Praesidium IT Solutions</strong><span class="date">Oct 2017 – Jan 2019</span></div><ul>
+<li>Built ServiceS Mart, a digital concierge/service marketplace with Smart Points loyalty (buy, redeem and transfer); integrated payment gateways for Canada and Mexico.</li>
+<li>Developed SMartBatches Node.js jobs for scheduled payment-system maintenance and business-rule-driven database updates.</li></ul></div>
+<div class="role"><div class="rolehead"><strong>Android Developer · Softuvo Solutions</strong><span class="date">2016 – 2017</span></div><ul><li>Delivered Docmein document/photo/file management with cloud backup, Pundit live audio commentary (approximately 1.2-second latency target), and User Support workflows.</li></ul></div>
+<div class="role"><div class="rolehead"><strong>Android Developer · Bytenomi Technologies</strong><span class="date">2015 – 2016</span></div><ul><li>Built internal sales, SmartAlarm reusable library, RoboMart, Virtual Chat and Financial Management projects; contributed to NIR image-spectra processing R&amp;D.</li></ul></div>
+<div class="role"><div class="rolehead"><strong>Android Developer · TechiTechnologies</strong><span class="date">2014 – 2015</span></div><ul><li>Built Top 25 Contacts using PhoneGap and Xtreme Bootcamp for class schedules, sign-ups, promotions and studio information.</li></ul></div>
 </section>
-
-<section>
-    <h2>Experience</h2>
-
-    <div class="current-role">
-        <div class="role-top">
-            <span class="role-title">Senior Software Engineer</span>
-            <span class="role-date">Feb 2023 - Present</span>
-        </div>
-        <p class="role-meta"><strong>Walmart Global Tech</strong> &middot; UGC (Reviews, Ratings, Media) &middot; Android · GraphQL · Java · Spark/Kafka · GCP</p>
-
-        <p class="subheading">Platform, Migration &amp; Architecture</p>
-        <ul>
-            <li>Led zero-downtime V1→V2 dual read/write migration with feature-flagged shadow traffic, parity logging, and instant rollback across <strong>11 surfaces</strong> (1,251/1,251 tests; 30 new); now in A/B.</li>
-            <li>Designed Memcache cache-aside for item enrichment: seller-reviews p95 ~<strong>40% lower</strong>; projected <strong>80–95%</strong> fewer repeat downstream calls; 8-option enrichment analysis (est. 8K → 0.4–1.6K QPS).</li>
-            <li>Built OpenAPI clients and GraphQL resolvers (seller reviews, submit, sampling) forming the UGC 2.0 foundation; led enrichment design with 5+ platform teams.</li>
-        </ul>
-
-        <p class="subheading">Mobile, Media &amp; Performance</p>
-        <ul>
-            <li>PDP Reviews render ~<strong>40→10 ms</strong> (~75% faster), jank near zero; earlier variant caching cut <strong>1–1.6B API calls/day</strong>.</li>
-            <li>Led Video Reviews research→production: vendor API deep-dive, progressive upload, Android streaming (64 KB chunks, up to 200 MB); camera + multi-image aligned across Android/iOS/web.</li>
-            <li>Capacity/stress at ~<strong>3.3M req/min</strong>: p95 ~49 ms (from 121–145 ms), 0 rate-limits; found Node single-thread ceiling and slow downstream call.</li>
-        </ul>
-
-        <p class="subheading">Data Pipelines, Quality &amp; Leadership</p>
-        <ul>
-            <li>Built multi-channel (email/push) sampling reminder pipeline: Spark/Dataproc, Airflow, Kafka (protobuf/SSL), Cassandra, BigQuery — targeting ~33K never-enrolled invitees; A/B gating + safe E2E harness.</li>
-            <li>Built PixelMind (DINOv2 visual regression on K8s); ~30–35% fewer UI-automation false failures; release sign-off SOP; AI tooling (status skill, flag generator).</li>
-            <li>Caught pre-prod risks (vendor double-write, OOM, false canary rollback, secrets); on-call, stress ownership; mentor engineers.</li>
-        </ul>
-        <p class="award">Multiple-time Bravo Award | Zero accessibility defects</p>
-    </div>
-
-    <div class="earlier-section">
-        <h2>Earlier Experience</h2>
-        <p class="earlier-intro">2014–2023: enterprise communication, trusted mobility, GPS/IoT tracking, real-time audio and Android product engineering.</p>
-
-        <div class="prior-roles">
-            <div class="prior-role"><div class="prior-left"><div class="role-title">Senior Software Engineer II - Android</div><div class="prior-company">Rakuten India</div><div class="prior-date">2021 - 2023</div></div><ul><li><strong>Rakuten LINK AI Assistant:</strong> developed the LINK Chatbot module inside the communication app.</li><li><strong>Rakuten LINK Office:</strong> core developer on the enterprise communication application.</li><li>Worked with Java/Kotlin, MVVM, SQLite/Room and Android SDK/NDK across messaging and offline data workflows.</li></ul></div>
-            <div class="prior-role"><div class="prior-left"><div class="role-title">Senior SDE - Android</div><div class="prior-company">WHIDE / Letstrack</div><div class="prior-date">2019 - 2021</div></div><ul><li><strong>WHIDE Customer &amp; Partner:</strong> Android apps for trusted-driver bookings, rides and on-demand delivery; partner onboarding, service fulfilment and live trip visibility.</li><li><strong>Letstrack Mobile:</strong> GPS tracking and messaging; <strong>LTRetail:</strong> retailer app for sales initiation and activation of tracking devices/service boxes.</li><li><strong>Letstrack AI:</strong> researched and built a Google Home Action using Node.js and Dialogflow for device information and supported vehicle actions.</li></ul></div>
-            <div class="prior-role"><div class="prior-left"><div class="role-title">Senior Android Developer</div><div class="prior-company">Praesidium IT Solution</div><div class="prior-date">Oct 2017 - Jan 2019</div></div><ul><li><strong>ServiceS Mart:</strong> digital concierge/service marketplace with Smart Points loyalty (buy, redeem, transfer); integrated payment gateways for Canada and Mexico.</li><li><strong>SMartBatches:</strong> Node.js batch processes for payment-system maintenance and scheduled business-rule-driven database updates.</li><li>Contributed across requirements, sprint planning, estimation, development-team coordination, implementation and release testing.</li></ul></div>
-            <div class="prior-role"><div class="prior-left"><div class="role-title">Android Developer</div><div class="prior-company">Softuvo Solutions</div><div class="prior-date">2016 - 2017</div></div><ul><li><strong>Docmein:</strong> document/photo/file management with cloud backup; <strong>Pundit:</strong> live audio commentary with an approximately 1.2-second latency target.</li><li><strong>User Support:</strong> in-app issue submission and support workflows.</li></ul></div>
-            <div class="prior-role"><div class="prior-left"><div class="role-title">Android Developer</div><div class="prior-company">Bytenomi Technologies</div><div class="prior-date">2015 - 2016</div></div><ul><li>Built internal sales, SmartAlarm reusable library, RoboMart storefront, Virtual Chat, Financial Management and NIR image-spectra R&amp;D projects.</li></ul></div>
-            <div class="prior-role"><div class="prior-left"><div class="role-title">Android Developer</div><div class="prior-company">TechiTechnologies</div><div class="prior-date">2014 - 2015</div></div><ul><li>Built Top 25 Contacts (PhoneGap) and Xtreme Bootcamp (class schedules, sign-ups, promotions and studio information).</li></ul></div>
-        </div>
-    </div>
+<section><h2>Independent Products &amp; Engineering</h2>
+<div class="project"><strong>Gatheroly — Independent Product</strong><p>Building a multi-tenant event SaaS platform for organisers, vendors and guests: tenant-aware workspaces, event websites, RSVP/guest experiences, plans and entitlements, and AI-assisted event photo discovery using AWS Rekognition. <a href="https://www.gatheroly.tech">gatheroly.tech</a></p></div>
+<div class="project"><strong>TechnoRapper — Technology Publication &amp; Platform</strong><p>Founded and operated a technology publication since 2012 with 134,000+ stories. Leading a technical modernisation and audit of its WordPress platform, covering performance, plugin footprint, responsive UI, SEO, analytics, RSS/editorial workflows and ad placement. <a href="https://technorapper.com">technorapper.com</a></p></div>
+<div class="project"><strong>Android Architecture &amp; Applied Computer Vision</strong><p>Created reusable Kotlin/Java Android architecture starters (KotlinAndroidBase and CoreAndroidMVVM), with explorations in OpenCV face recognition, Jetpack Compose desktop and Android dynamic code loading. <a href="https://github.com/HaneetGH/KotlinAndroidBase">KotlinAndroidBase</a> · <a href="https://github.com/HaneetGH/CoreAndroidMVVM">CoreAndroidMVVM</a></p></div>
 </section>
-
-<section>
-    <h2>Selected Independent Projects</h2>
-    <div class="prior-roles">
-        <div class="prior-role">
-            <div class="prior-left">
-                <div class="role-title">Gatheroly</div>
-                <div class="prior-company">Independent Product</div>
-                <div class="prior-date"><a href="https://www.gatheroly.tech">gatheroly.tech</a></div>
-            </div>
-            <ul>
-                <li>Building a multi-tenant event SaaS platform for organisers, vendors and guests: tenant-aware workspaces, event websites, RSVP and guest experiences, plans/entitlements, and AI-assisted photo discovery using AWS Rekognition.</li>
-            </ul>
-        </div>
-        <div class="prior-role">
-            <div class="prior-left">
-                <div class="role-title">Android Architecture Projects</div>
-                <div class="prior-company">KotlinAndroidBase · CoreAndroidMVVM</div>
-                <div class="prior-date"><a href="https://github.com/HaneetGH/KotlinAndroidBase">Kotlin</a> · <a href="https://github.com/HaneetGH/CoreAndroidMVVM">Java</a></div>
-            </div>
-            <ul>
-                <li>Reusable Android starter and MVVM boilerplate projects exploring dependency injection, persistence, asynchronous execution, networking and lifecycle-aware structure.</li>
-            </ul>
-        </div>
-    </div>
+<section class="skills"><h2>Technical Skills</h2>
+<p><b>Android &amp; Mobile:</b> Kotlin, Java, Jetpack Compose, Android SDK, MVVM/MVI, Coroutines, Flow, CameraX, media processing, modularisation, performance optimisation</p>
+<p><b>Backend &amp; APIs:</b> GraphQL/Apollo, Node.js/TypeScript, REST, OpenAPI, Java/Spring, API design, caching, distributed systems</p>
+<p><b>Data &amp; Cloud:</b> Spark, Airflow, Kafka, Cassandra, BigQuery, GCP, Dataproc, GCS, Kubernetes, Docker, Helm, Memcache</p>
+<p><b>Quality &amp; Reliability:</b> JMeter, stress testing, Grafana, Splunk, A/B testing, feature flags, canary releases, E2E automation, visual regression</p>
+<p><b>Product &amp; AI:</b> Next.js, Prisma, Neon, Firebase, Vercel, AWS Rekognition, DINOv2, GenAI/LLM tooling</p>
 </section>
-
-<section>
-    <div class="footer-grid">
-        <div>
-            <h2>Technical Skills</h2>
-            <div class="skills-block">
-                <span class="skills-label">Android: </span>
-                <span class="skills-list">Kotlin, Java, Jetpack Compose, MVVM, Coroutines/Flow, CameraX, MediaMetadataRetriever/Muxer, streaming multipart upload, reactive state machines, performance, module architecture</span>
-            </div>
-            <div class="skills-block">
-                <span class="skills-label">Platform &amp; Data: </span>
-                <span class="skills-list">GraphQL/Apollo, Node.js/TypeScript, REST/OpenAPI, Spring/Java, SQL/CQL, Memcache (cache-aside/negative), Spark, Airflow, Kafka (protobuf/SSL), Cassandra, BigQuery, GCS, Elasticsearch, Dataproc</span>
-            </div>
-            <div class="skills-block">
-                <span class="skills-label">Cloud, Observability &amp; Quality: </span>
-                <span class="skills-list">Kubernetes, Docker, Helm, canary/HPA, Grafana, Splunk, JMeter, UI automation, visual regression, Jest/E2E harnesses, A/B, feature flags, release validation</span>
-            </div>
-            <div class="skills-block">
-                <span class="skills-label">Product &amp; AI: </span>
-                <span class="skills-list">Next.js, Prisma, Neon, Firebase, Vercel, Rekognition, DINOv2/visual regression, GenAI/LLM, OCR, Razorpay/UPI, Rust (learning)</span>
-            </div>
-        </div>
-        <div class="education-box">
-            <h2>Education</h2>
-            <p class="education-degree">B.Tech, Computer Science &amp; Engineering</p>
-            <p class="education-school">Punjab Technical University</p>
-        </div>
-    </div>
-</section>
-
-</body>
-</html>
+<section><h2>Education</h2><p><b>B.Tech, Computer Science &amp; Engineering</b> · Punjab Technical University</p></section>
+</div>
+</main></body></html>
