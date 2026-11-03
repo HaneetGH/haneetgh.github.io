@@ -494,45 +494,18 @@
             <div class="role-header">
                 <h4>Gatheroly — Multi-Tenant Event Platform</h4>
                 <span>
-                    <a href="https://www.gatheroly.tech" target="_blank" rel="noopener">Live</a>
-                </span>
-            </div>
-            <p class="role-context">Next.js · Prisma · Neon Postgres · Vercel · AWS Rekognition · Firebase · Zod</p>
-            <ul>
-                <li>Built a multi-tenant event SaaS (weddings and private gatherings) with owner, vendor (reseller), and client roles — isolated workspaces, subdomain/path tenant routing, plans, trials, and entitlements.</li>
-                <li>API-first layering (route → service → repository) so the same contracts can power a future mobile app; feature modules (RSVP, stay, Connect social wall, find-my-photos) toggled per client.</li>
-                <li>Shipped host dashboards, guest public sites, Event Wall with host Stories, face-find via Rekognition, and self-serve trial signup with email OTP.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <div class="role-header">
-                <h4>#Swaneet — Wedding Platform</h4>
-                <span>
-                    <a href="https://swaneet.vercel.app" target="_blank" rel="noopener">Live</a>
+                    <a href="https://www.gatheroly.tech" target="_blank" rel="noopener">Live Product</a>
                     ·
-                    <a href="https://github.com/HaneetGH/Swaneet-" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://github.com/HaneetGH/event-saas-platform" target="_blank" rel="noopener">GitHub</a>
                 </span>
             </div>
-            <p class="role-context">Next.js 15 · Neon Postgres · Vercel Blob · AWS Rekognition · Firebase · Resend</p>
+            <p class="role-context">Independent Personal Project · Next.js · TypeScript · Prisma · PostgreSQL · Vercel · AWS Rekognition · Firebase</p>
+            <p>Designed and built Gatheroly as an independent SaaS product for event organisers, vendors and guests. It is separate from my professional work at Walmart Global Tech.</p>
             <ul>
-                <li>Built a cinematic guest experience with Framer Motion, GSAP, Lenis, and React Three Fiber — invitation, countdown, story, events, venue map, gallery, and RSVP.</li>
-                <li>Shipped a PIN + RBAC admin dashboard for events, RSVPs, accommodation/room assignment, gallery moderation, team invites, and feature flags across main / mehfil / laavan sites.</li>
-                <li>Integrated AWS Rekognition for “find my photos” — selfie match, face clusters, multi-merge, and magic-link private albums; transactional email via Resend.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <div class="role-header">
-                <h4>BillSplit India</h4>
-                <span>
-                    <a href="https://github.com/HaneetGH/BillSplit" target="_blank" rel="noopener">GitHub</a>
-                </span>
-            </div>
-            <p class="role-context">Turborepo · Next.js 14 · Firebase · Razorpay / UPI · OCR + LLM · Zod</p>
-            <ul>
-                <li>Designed a fintech monorepo for receipt scanning, equal/item/custom splits, secure claim links, and UPI collection with Razorpay — no platform wallet (RBI PA/PG-aware).</li>
-                <li>Built a receipt OCR pipeline with Tesseract / Cloud Vision and Gemini/OpenAI parsing behind entitlements; webhook HMAC idempotency and money as integer paise.</li>
+                <li><strong>Multi-tenant SaaS architecture</strong> — owner, vendor/reseller and client workspaces with tenant-aware routing, isolated event sites, plans, trials and feature entitlements.</li>
+                <li><strong>Event management experience</strong> — owner dashboards, client workspaces, public event websites, RSVP, guest engagement and event photo experiences.</li>
+                <li><strong>AI-powered photo discovery</strong> — face-based photo matching using AWS Rekognition, allowing guests to find their event photos.</li>
+                <li><strong>API-first foundation</strong> — separation of route handlers, services and repositories to keep business logic reusable and support future mobile clients.</li>
             </ul>
         </div>
     </section>
