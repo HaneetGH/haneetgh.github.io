@@ -18,10 +18,10 @@
       "jobTitle": "Senior Software Engineer",
       "worksFor": {"@type": "Organization", "name": "Walmart Global Tech"},
       "sameAs": ["https://www.linkedin.com/in/haneetchhabra", "https://github.com/HaneetGH"],
-      "knowsAbout": ["Android", "Kotlin", "Java", "GraphQL", "Platform Engineering", "Apache Spark", "Apache Kafka", "Next.js", "SaaS Product Development"]
+      "knowsAbout": ["Android", "Kotlin", "Java", "GraphQL", "Platform Engineering", "Apache Spark", "Apache Kafka", "Next.js", "SaaS Product Development", "WordPress", "PHP", "AI content pipelines"]
     }
     </script>
-    <meta name="description" content="Haneet Singh Chhabra — Senior Software Engineer at Walmart Global Tech. Android, Kotlin, GraphQL, Java services, and GCP data pipelines. Independent product builder of Gatheroly, a multi-tenant event SaaS platform."/>
+    <meta name="description" content="Haneet Singh Chhabra — Senior Software Engineer at Walmart Global Tech. Android, Kotlin, GraphQL, Java services, and GCP data pipelines. Independent builder of Gatheroly and TechnoRapper AI Wire, an open-source WordPress newsroom plugin."/>
     <title>Haneet Singh Chhabra | Senior Software Engineer</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -222,6 +222,14 @@
 
         .card p { margin: 0 0 12px; color: var(--muted); }
         .card p strong { color: var(--text); }
+        .card code, .detail-content code {
+          font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace;
+          color: #c9e6f6;
+          background: rgba(105, 212, 255, .08);
+          border: 1px solid var(--border);
+          border-radius: 4px;
+          padding: 1px 5px;
+        }
 
         .role-header {
           display: flex;
@@ -421,7 +429,8 @@
         .collab-item { background:rgba(2,12,24,.48); border-radius:13px; }
         .pill { background:rgba(2,12,24,.52); border-color:var(--border); }
         .award { border-radius:999px; }
-        .featured-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:26px; }
+        .featured-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:26px; }
+        .featured-card:nth-child(4):before { background:linear-gradient(90deg,#ffc48a,transparent 78%); }
         .featured-card { position:relative; overflow:hidden; min-height:100%; padding:24px; border:1px solid var(--border); border-radius:18px; background:linear-gradient(155deg,rgba(16,38,60,.98),rgba(10,23,39,.98)); }
         .featured-card:before { content:""; position:absolute; left:0; top:0; width:100%; height:2px; background:linear-gradient(90deg,var(--accent),transparent 78%); }
         .featured-card:nth-child(2):before { background:linear-gradient(90deg,var(--green),transparent 78%); }
@@ -499,7 +508,8 @@
             I build and scale customer-facing products from mobile experiences to distributed platform capabilities.
             At Walmart Global Tech, I lead engineering across UGC — Android, APIs, caching, migrations and data pipelines.
             Before that: enterprise communication at Rakuten, trusted mobility and GPS/IoT products at WHIDE and Letstrack,
-            and a range of Android products at Praesidium. Outside work, I am building Gatheroly, an independent event SaaS product.
+            and a range of Android products at Praesidium. Outside work I build Gatheroly, an independent event SaaS product,
+            and I recently rebuilt TechnoRapper — a 14-year-old technology publication — with a custom theme and an open-source AI newsroom plugin.
         </p>
         <div class="hero-actions">
             <a class="hero-button primary" href="#featured-work">Explore selected work ↓</a>
@@ -511,12 +521,13 @@
             <span>Walmart Global Tech</span>
             <span>Kotlin · Android · GraphQL · Spark · Kafka</span>
             <span>Independent product: Gatheroly</span>
+            <span>Open-source: AI Wire</span>
         </div>
     </header>
 
 <section id="featured-work">
         <h3>Selected Engineering Work</h3>
-        <p class="section-intro">A focused view of the systems and products that best represent how I work: enterprise-scale platform engineering, independent product development and multi-sided mobile products.</p>
+        <p class="section-intro">A focused view of the systems and products that best represent how I work: enterprise-scale platform engineering, independent product development, a rebuilt publishing platform, and multi-sided mobile products.</p>
         <div class="featured-grid">
             <article class="featured-card">
                 <span class="featured-label">Enterprise · Walmart Global Tech</span>
@@ -566,6 +577,31 @@
                     </div>
                 </details>
                 <p><a class="text-link" href="https://www.gatheroly.tech" target="_blank" rel="noopener">Visit Gatheroly ↗</a></p>
+            </article>
+
+            <article class="featured-card">
+                <span class="featured-label">Independent · Open source · Nov 2026</span>
+                <h4>TechnoRapper — AI newsroom rebuild</h4>
+                <p>A 14-year-old WordPress publication rebuilt as a measured publishing platform: custom theme, fail-closed RSS-to-article pipeline, and optional social distribution on the operator's own accounts.</p>
+                <ul>
+                    <li>Custom magazine theme: official mobile PageSpeed Insights measured Performance 90, Accessibility 100, SEO 100, LCP 2.7s and CLS 0 (earlier lab LCP on the old theme was 13.8s).</li>
+                    <li>AI Wire plugin: RSS/Atom → writer model → independent reviewer → auto-publish or draft, with fail-closed moderation.</li>
+                    <li>Optional branded stills, spoken Reels and YouTube Shorts, plus an open playbook for repairing a live WordPress archive without deleting posts or changing permalinks.</li>
+                </ul>
+                <div class="case-meta"><span>PHP</span><span>WordPress</span><span>OpenAI / Gemini</span><span>Instagram · YouTube · X</span></div>
+                <details class="case-detail">
+                    <summary>Explore the publishing pipeline</summary>
+                    <div class="detail-content">
+                        <h5>Content pipeline</h5>
+                        <div class="flow-diagram"><span class="flow-node">RSS / Atom feeds</span><span class="flow-arrow">→</span><span class="flow-node">Writer model</span><span class="flow-arrow">→</span><span class="flow-node">Independent reviewer</span><span class="flow-arrow">→</span><span class="flow-node">WP draft / publish</span><span class="flow-arrow">→</span><span class="flow-node">X · Instagram · Reels · Shorts</span></div>
+                        <p>Each feed is a tenant. Items are deduplicated, assigned a stable A/B variant, written as original attributed copy, then reviewed for claims, novelty, usefulness and policy. Thin blurbs, deal lists and recaps are held. Rejected items stay quarantined. Auto-publish can be turned off to keep drafts for a human editor.</p>
+                        <h5>Safety and operations</h5>
+                        <p>Runs are serialised with a database-backed lock. Manual admin work is enqueued in the background. Policy scans use a local profanity/slur list plus OpenAI Moderation on articles and every outbound caption, Reel script and YouTube listing. Flagged OpenAI prompts retry a shorter excerpt, then Gemini 2.5 Flash. Social stills sit behind a review-score floor so low-value cards are not posted.</p>
+                        <h5>What I learned</h5>
+                        <p>Repair the information architecture before restyling. Measure after cache purge, and do not mix WPVibe lab scores with PageSpeed Insights. Keep credentials, permalinks and the post archive off the rewrite path. Treat AI review as a quality gate, not a guarantee of factual accuracy.</p>
+                    </div>
+                </details>
+                <p><a class="text-link" href="https://technorapper.com" target="_blank" rel="noopener">Visit TechnoRapper ↗</a> &nbsp;·&nbsp; <a class="text-link" href="https://github.com/HaneetGH/technorapper-ai-wire" target="_blank" rel="noopener">AI Wire ↗</a> &nbsp;·&nbsp; <a class="text-link" href="#personal-projects">Read the rebuild ↓</a></p>
             </article>
 
             <article class="featured-card">
@@ -836,17 +872,35 @@
 
 <section id="personal-projects">
         <h3>Independent Products &amp; Engineering Projects</h3>
-        <p class="section-intro">Products and experiments built independently. Gatheroly is the flagship product; the remaining repositories demonstrate Android architecture, platform exploration and UI engineering.</p>
+        <p class="section-intro">Products and experiments built independently. Gatheroly is the flagship SaaS product. In November 2026 I rebuilt TechnoRapper's live publishing stack and open-sourced the plugin, theme and repair playbook. The remaining repositories demonstrate Android architecture, platform exploration and UI engineering.</p>
 
         <div class="card">
-            <div class="role-header"><h4>TechnoRapper — Technology Publication</h4><span><a href="https://technorapper.com" target="_blank" rel="noopener">Live Website ↗</a></span></div>
-            <p class="role-context">Independent Publishing · WordPress · RSS · Editorial &amp; Website Operations · Since 2012</p>
-            <p>Founded and maintained a technology publication that has grown into a long-running content property with more than 134,000 published stories.</p>
+            <div class="role-header"><h4>TechnoRapper — Technology Publication &amp; Platform Rebuild</h4><span><a href="https://technorapper.com" target="_blank" rel="noopener">Live Website ↗</a></span></div>
+            <p class="role-context">Independent Publishing · Custom WordPress Theme · Performance · RSS / Editorial Ops · Since 2012 · Rebuild Nov 2026</p>
+            <p>Founded and maintained a technology publication that has grown into a long-running content property with more than 134,000 published stories. In early November 2026 I audited the live WordPress install and replaced the bottleneck parent theme without deleting the archive or changing permalinks.</p>
             <ul>
                 <li><strong>Long-term ownership</strong> — built and operated the publication over many years, managing its WordPress site, content workflows, RSS sources, plugins and ongoing maintenance.</li>
-                <li><strong>Publishing platform</strong> — maintained a technology-news and reviews destination with a large archive and evolving site architecture.</li>
-                <li><strong>Continuous improvement</strong> — undertook a technical audit covering performance, plugin footprint, responsive UI, advertising placements, SEO and analytics quality.</li>
+                <li><strong>Custom magazine theme</strong> — shipped an open-source photo-board theme with desk rails, paged archives, story pages and ad slots that each operator fills from their own account. First-image LCP uses sized images, <code>fetchpriority="high"</code> and a resizer for off-site RSS artwork.</li>
+                <li><strong>Measured, not guessed</strong> — official mobile PageSpeed Insights after the custom theme: Performance 90, Accessibility 100, SEO 100, LCP 2.7s, CLS 0. Earlier WPVibe lab LCP on the old theme was 13.8s; those two labs are not one continuous chart.</li>
+                <li><strong>Constraints kept</strong> — posts, permalinks and the AdSense publisher ID stayed. Unused plugins were turned off in the database. Numbers were published only after cache purge on the public URL.</li>
             </ul>
+            <p class="tech-line">Open sources: <a href="https://github.com/HaneetGH/technorapper-wp-theme" target="_blank" rel="noopener">technorapper-wp-theme ↗</a> · <a href="https://github.com/HaneetGH/technorapper-ai-guide" target="_blank" rel="noopener">repair playbook ↗</a> · <a href="https://pagespeed.web.dev/analysis/https-technorapper-com/rd9rm04l37?form_factor=mobile" target="_blank" rel="noopener">PageSpeed report ↗</a></p>
+        </div>
+
+        <div class="card">
+            <div class="role-header">
+                <h4>AI Wire — Open-Source WordPress Newsroom Plugin</h4>
+                <span><a href="https://github.com/HaneetGH/technorapper-ai-wire" target="_blank" rel="noopener">GitHub ↗</a></span>
+            </div>
+            <p class="role-context">Independent Engineering · PHP · WordPress 6.2+ · WP-Cron · OpenAI · Gemini fallback · Instagram Graph · YouTube Data API · X API · GPLv2 · Nov 2026</p>
+            <p>Designed and shipped a GPLv2 WordPress plugin that turns operator-configured RSS/Atom feeds into source-attributed, AI-reviewed posts, then can optionally distribute a branded graphic, a spoken Instagram Reel and a YouTube Short to the operator's own accounts. It is not tied to one newsroom.</p>
+            <ul>
+                <li><strong>Fail-closed editorial pipeline</strong> — writer and independent reviewer; thin blurbs, deal lists, coupons and recaps are held; policy hits are quarantined; Auto-publish can be switched off for drafts.</li>
+                <li><strong>Production operations</strong> — database-backed run lock, per-run and daily caps, monthly token/USD budgets, background enqueue for long admin actions, idempotent draft recovery, and a first-party 3-second visible-read counter with signed REST payloads.</li>
+                <li><strong>Social distribution</strong> — branded stills with rotating layouts, spoken Reels, public YouTube Shorts via Google sign-in (not an API key), and X posting that spends developer credits rather than mixing cost meters. Low-score stills are skipped so the account is not flooded.</li>
+                <li><strong>What I learned</strong> — treat AI review as a quality gate, not legal clearance; keep credentials off git; separate OpenAI, X credits, Instagram quota, YouTube quota and Fal video spend; retry flagged OpenAI prompts with a shorter excerpt, then Gemini.</li>
+            </ul>
+            <div class="case-meta"><span>PHP</span><span>WordPress plugin</span><span>WP-Cron</span><span>OpenAI</span><span>Gemini</span><span>OAuth</span><span>Moderation</span><span>A/B experiments</span></div>
         </div>
         <div class="card">
             <div class="role-header">
@@ -1009,10 +1063,22 @@
                 <span class="pill">Zod</span>
             </div>
             <div class="skills-group">
+                <h4>Publishing &amp; Content Platforms</h4>
+                <span class="pill">PHP / WordPress</span>
+                <span class="pill">Custom WP Themes</span>
+                <span class="pill">Plugin Architecture</span>
+                <span class="pill">WP-Cron / Background Jobs</span>
+                <span class="pill">RSS / Atom Ingestion</span>
+                <span class="pill">LCP / CLS Performance</span>
+            </div>
+            <div class="skills-group">
                 <h4>AI, Media &amp; Learning</h4>
                 <span class="pill">DINOv2 / Visual Regression</span>
                 <span class="pill">AWS Rekognition</span>
                 <span class="pill">GenAI / LLM</span>
+                <span class="pill">OpenAI + Gemini fallback</span>
+                <span class="pill">Content Moderation</span>
+                <span class="pill">Instagram Graph / YouTube / X APIs</span>
                 <span class="pill">OCR</span>
                 <span class="pill">Video Metadata</span>
                 <span class="pill">Rust (learning)</span>
